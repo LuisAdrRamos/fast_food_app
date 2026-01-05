@@ -1,0 +1,4691 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.gitattributes
+.gitignore
+.metadata
+analysis_options.yaml
+android/.gitignore
+android/app/build.gradle
+android/app/src/debug/AndroidManifest.xml
+android/app/src/main/AndroidManifest.xml
+android/app/src/main/kotlin/com/example/fast_food_app/MainActivity.kt
+android/app/src/main/res/drawable-v21/launch_background.xml
+android/app/src/main/res/drawable/launch_background.xml
+android/app/src/main/res/mipmap-hdpi/ic_launcher.png
+android/app/src/main/res/mipmap-mdpi/ic_launcher.png
+android/app/src/main/res/mipmap-xhdpi/ic_launcher.png
+android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png
+android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+android/app/src/main/res/values-night/styles.xml
+android/app/src/main/res/values/styles.xml
+android/app/src/profile/AndroidManifest.xml
+android/build.gradle
+android/gradle.properties
+android/gradle/wrapper/gradle-wrapper.properties
+android/settings.gradle
+app-release.apk
+assets/images/burger.jpg
+assets/images/chicken.jpg
+assets/images/drink.jpg
+assets/images/fries.jpg
+lib/auth/auth_service.dart
+lib/auth/change_password_screen.dart
+lib/auth/forgot_password_screen.dart
+lib/auth/login_screen.dart
+lib/auth/register_screen.dart
+lib/core/env.dart
+lib/core/offer_service.dart
+lib/core/order_service.dart
+lib/core/product_service.dart
+lib/core/role_service.dart
+lib/core/supabase_config.dart
+lib/core/theme.dart
+lib/main.dart
+lib/models/cart_item.dart
+lib/models/product.dart
+lib/screens/detail_screen.dart
+lib/screens/home_screen.dart
+lib/state/app_state.dart
+lib/ui/cart_screen.dart
+lib/ui/checkout_screen.dart
+lib/ui/employee_home_screen.dart
+lib/ui/employee_orders_screen.dart
+lib/ui/employee_products_screen.dart
+lib/ui/order_status_screen.dart
+lib/ui/order_tracking_screen.dart
+lib/ui/product_detail_screen.dart
+lib/ui/user_home_screen.dart
+lib/widgets/food_card.dart
+lib/widgets/quantity_stepper.dart
+pubspec.lock
+pubspec.yaml
+README.md
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".gitattributes">
+# Auto detect text files and perform LF normalization
+* text=auto
+</file>
+
+<file path=".gitignore">
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+.env
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+</file>
+
+<file path=".metadata">
+# This file tracks properties of this Flutter project.
+# Used by Flutter tool to assess capabilities and perform upgrades etc.
+#
+# This file should be version controlled and should not be manually edited.
+
+version:
+  revision: "d8a9f9a52e5af486f80d932e838ee93861ffd863"
+  channel: "stable"
+
+project_type: app
+
+# Tracks metadata for the flutter migrate command
+migration:
+  platforms:
+    - platform: root
+      create_revision: d8a9f9a52e5af486f80d932e838ee93861ffd863
+      base_revision: d8a9f9a52e5af486f80d932e838ee93861ffd863
+    - platform: android
+      create_revision: d8a9f9a52e5af486f80d932e838ee93861ffd863
+      base_revision: d8a9f9a52e5af486f80d932e838ee93861ffd863
+    - platform: ios
+      create_revision: d8a9f9a52e5af486f80d932e838ee93861ffd863
+      base_revision: d8a9f9a52e5af486f80d932e838ee93861ffd863
+    - platform: linux
+      create_revision: d8a9f9a52e5af486f80d932e838ee93861ffd863
+      base_revision: d8a9f9a52e5af486f80d932e838ee93861ffd863
+    - platform: macos
+      create_revision: d8a9f9a52e5af486f80d932e838ee93861ffd863
+      base_revision: d8a9f9a52e5af486f80d932e838ee93861ffd863
+    - platform: web
+      create_revision: d8a9f9a52e5af486f80d932e838ee93861ffd863
+      base_revision: d8a9f9a52e5af486f80d932e838ee93861ffd863
+    - platform: windows
+      create_revision: d8a9f9a52e5af486f80d932e838ee93861ffd863
+      base_revision: d8a9f9a52e5af486f80d932e838ee93861ffd863
+
+  # User provided section
+
+  # List of Local paths (relative to this file) that should be
+  # ignored by the migrate tool.
+  #
+  # Files that are not part of the templates will be ignored by default.
+  unmanaged_files:
+    - 'lib/main.dart'
+    - 'ios/Runner.xcodeproj/project.pbxproj'
+</file>
+
+<file path="analysis_options.yaml">
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  # The lint rules applied to this project can be customized in the
+  # section below to disable rules from the `package:flutter_lints/flutter.yaml`
+  # included above or to enable additional rules. A list of all available lints
+  # and their documentation is published at https://dart.dev/lints.
+  #
+  # Instead of disabling a lint rule for the entire project in the
+  # section below, it can also be suppressed for a single line of code
+  # or a specific dart file by using the `// ignore: name_of_lint` and
+  # `// ignore_for_file: name_of_lint` syntax on the line or in the file
+  # producing the lint.
+  rules:
+    # avoid_print: false  # Uncomment to disable the `avoid_print` rule
+    # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options
+</file>
+
+<file path="android/.gitignore">
+gradle-wrapper.jar
+/.gradle
+/captures/
+/gradlew
+/gradlew.bat
+/local.properties
+GeneratedPluginRegistrant.java
+
+# Remember to never publicly share your keystore.
+# See https://flutter.dev/to/reference-keystore
+key.properties
+**/*.keystore
+**/*.jks
+</file>
+
+<file path="android/app/build.gradle">
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.fast_food_app"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId = "com.example.fast_food_app"
+        // You can update the following values to match your application needs.
+        // For more information, see: https://flutter.dev/to/review-gradle-config.
+        minSdk = flutter.minSdkVersion
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+</file>
+
+<file path="android/app/src/debug/AndroidManifest.xml">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The INTERNET permission is required for development. Specifically,
+         the Flutter tool needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
+</file>
+
+<file path="android/app/src/main/kotlin/com/example/fast_food_app/MainActivity.kt">
+package com.example.fast_food_app
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity()
+</file>
+
+<file path="android/app/src/main/res/drawable-v21/launch_background.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modify this file to customize your launch splash screen -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="?android:colorBackground" />
+
+    <!-- You can insert your own image assets here -->
+    <!-- <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/launch_image" />
+    </item> -->
+</layer-list>
+</file>
+
+<file path="android/app/src/main/res/drawable/launch_background.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modify this file to customize your launch splash screen -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/white" />
+
+    <!-- You can insert your own image assets here -->
+    <!-- <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/launch_image" />
+    </item> -->
+</layer-list>
+</file>
+
+<file path="android/app/src/main/res/values-night/styles.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is on -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <!-- Show a splash screen on the activity. Automatically removed when
+             the Flutter engine draws its first frame -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <!-- Theme applied to the Android Window as soon as the process has started.
+         This theme determines the color of the Android Window while your
+         Flutter UI initializes, as well as behind your Flutter UI while its
+         running.
+
+         This Theme is only used starting with V2 of Flutter's Android embedding. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
+</file>
+
+<file path="android/app/src/main/res/values/styles.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is off -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <!-- Show a splash screen on the activity. Automatically removed when
+             the Flutter engine draws its first frame -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <!-- Theme applied to the Android Window as soon as the process has started.
+         This theme determines the color of the Android Window while your
+         Flutter UI initializes, as well as behind your Flutter UI while its
+         running.
+
+         This Theme is only used starting with V2 of Flutter's Android embedding. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
+</file>
+
+<file path="android/app/src/profile/AndroidManifest.xml">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The INTERNET permission is required for development. Specifically,
+         the Flutter tool needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
+</file>
+
+<file path="android/build.gradle">
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+</file>
+
+<file path="android/gradle.properties">
+org.gradle.jvmargs=-Xmx4G -XX:MaxMetaspaceSize=2G -XX:+HeapDumpOnOutOfMemoryError
+android.useAndroidX=true
+android.enableJetifier=true
+</file>
+
+<file path="android/gradle/wrapper/gradle-wrapper.properties">
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.3-all.zip
+</file>
+
+<file path="lib/auth/auth_service.dart">
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'package:supabase_flutter/supabase_flutter.dart';
+import '../core/env.dart';
+
+class AuthService {
+  final _auth = Supabase.instance.client.auth;
+
+  Future<AuthResponse> login(String email, String password) {
+    return _auth.signInWithPassword(email: email, password: password);
+  }
+
+  Future<AuthResponse> registerUser(String email, String password) {
+    return _auth.signUp(email: email, password: password);
+  }
+
+  // ✅ RESET 1: Supabase directo (necesita Redirect URLs en Supabase)
+  Future<void> resetViaSupabase(String email, {required String redirectTo}) {
+    return _auth.resetPasswordForEmail(email, redirectTo: redirectTo);
+  }
+
+  // ✅ RESET 2: tu Vercel (si tienes /api/reset-password)
+  Future<void> resetViaVercel(String email) async {
+    final base = Env.resetApiUrl.trim();
+    if (base.isEmpty) throw Exception('RESET_API_URL no configurado');
+
+    final uri = Uri.parse(base.endsWith('/') ? '${base}api/reset-password' : '$base/api/reset-password');
+    final res = await http.post(
+      uri,
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({'email': email}),
+    );
+
+    if (res.statusCode < 200 || res.statusCode >= 300) {
+      throw Exception('Reset error ${res.statusCode}: ${res.body}');
+    }
+  }
+
+  Future<void> changePassword(String newPassword) {
+    return _auth.updateUser(UserAttributes(password: newPassword));
+  }
+
+  Future<void> logout() => _auth.signOut();
+}
+</file>
+
+<file path="lib/auth/change_password_screen.dart">
+import 'package:flutter/material.dart';
+import 'auth_service.dart';
+
+class ChangePasswordScreen extends StatefulWidget {
+  const ChangePasswordScreen({super.key});
+
+  @override
+  State<ChangePasswordScreen> createState() => _ChangePasswordScreenState();
+}
+
+class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
+  final pass = TextEditingController();
+  bool loading = false;
+
+  @override
+  void dispose() {
+    pass.dispose();
+    super.dispose();
+  }
+
+  Future<void> _change() async {
+    if (pass.text.trim().isEmpty) return;
+
+    setState(() => loading = true);
+    try {
+      await AuthService().changePassword(pass.text);
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Contraseña actualizada.')));
+      Navigator.pop(context);
+    } catch (e) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Error: $e')));
+    } finally {
+      if (mounted) setState(() => loading = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Cambiar contraseña')),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 420),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextField(controller: pass, obscureText: true, decoration: const InputDecoration(labelText: 'Nueva contraseña')),
+                const SizedBox(height: 16),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: loading ? null : _change,
+                    child: loading ? const CircularProgressIndicator() : const Text('Guardar'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/auth/forgot_password_screen.dart">
+import 'package:flutter/material.dart';
+import 'auth_service.dart';
+
+class ForgotPasswordScreen extends StatefulWidget {
+  final String? prefillEmail;
+  const ForgotPasswordScreen({super.key, this.prefillEmail});
+
+  @override
+  State<ForgotPasswordScreen> createState() => _ForgotPasswordScreenState();
+}
+
+class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
+  late final TextEditingController email;
+  bool loading = false;
+
+  @override
+  void initState() {
+    super.initState();
+    email = TextEditingController(text: widget.prefillEmail ?? '');
+  }
+
+  @override
+  void dispose() {
+    email.dispose();
+    super.dispose();
+  }
+
+  Future<void> _send() async {
+    final mail = email.text.trim();
+    if (mail.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Escriba el correo')));
+      return;
+    }
+
+    setState(() => loading = true);
+    try {
+      // ✅ Supabase manda email y abre tu Vercel /reset
+      await AuthService().resetViaSupabase(
+        mail,
+        redirectTo: 'https://web-reset-password-0fot.onrender.com/reset-password',
+      );
+
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Se envió el enlace al correo.')));
+      Navigator.pop(context);
+    } catch (e) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Error: $e')));
+    } finally {
+      if (mounted) setState(() => loading = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Recuperar contraseña')),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 420),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text('Se enviará un enlace para cambiar la contraseña.'),
+                const SizedBox(height: 12),
+                TextField(controller: email, decoration: const InputDecoration(labelText: 'Correo')),
+                const SizedBox(height: 16),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: loading ? null : _send,
+                    child: loading ? const CircularProgressIndicator() : const Text('Enviar enlace'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/auth/login_screen.dart">
+import 'package:flutter/material.dart';
+
+import 'auth_service.dart';
+import 'forgot_password_screen.dart';
+import 'register_screen.dart';
+
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  final email = TextEditingController();
+  final pass = TextEditingController();
+  bool loading = false;
+
+  Future<void> _login() async {
+    setState(() => loading = true);
+    try {
+      await AuthService().login(email.text.trim(), pass.text);
+
+      // ✅ NO navegar aquí.
+      // main.dart escucha onAuthStateChange y redirige automáticamente.
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Sesión iniciada')),
+      );
+    } catch (e) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Error: $e')),
+      );
+    } finally {
+      if (mounted) setState(() => loading = false);
+    }
+  }
+
+  @override
+  void dispose() {
+    email.dispose();
+    pass.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Inicio de sesión')),
+      body: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 420),
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(Icons.fastfood, size: 64),
+                const SizedBox(height: 16),
+                TextField(
+                  controller: email,
+                  decoration: const InputDecoration(labelText: 'Correo'),
+                  keyboardType: TextInputType.emailAddress,
+                  autofillHints: const [AutofillHints.username, AutofillHints.email],
+                ),
+                const SizedBox(height: 12),
+                TextField(
+                  controller: pass,
+                  obscureText: true,
+                  decoration: const InputDecoration(labelText: 'Contraseña'),
+                  autofillHints: const [AutofillHints.password],
+                ),
+                const SizedBox(height: 16),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: loading ? null : _login,
+                    child: loading
+                        ? const SizedBox(
+                            height: 18,
+                            width: 18,
+                            child: CircularProgressIndicator(strokeWidth: 2),
+                          )
+                        : const Text('Ingresar'),
+                  ),
+                ),
+                const SizedBox(height: 8),
+                TextButton(
+                  onPressed: loading
+                      ? null
+                      : () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => ForgotPasswordScreen(
+                                prefillEmail: email.text.trim(),
+                              ),
+                            ),
+                          ),
+                  child: const Text('Olvidé mi contraseña'),
+                ),
+                TextButton(
+                  onPressed: loading
+                      ? null
+                      : () => Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (_) => const RegisterScreen()),
+                          ),
+                  child: const Text('Crear cuenta'),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/auth/register_screen.dart">
+import 'package:flutter/material.dart';
+
+import 'auth_service.dart';
+
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
+
+  @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+  final email = TextEditingController();
+  final pass = TextEditingController();
+  bool loading = false;
+
+  Future<void> _register() async {
+    setState(() => loading = true);
+    try {
+      await AuthService().registerUser(email.text.trim(), pass.text);
+
+      // ✅ NO navegar a otra pantalla aquí.
+      // El error 500 es de DB/trigger, pero si registra bien, main.dart hará el cambio solo.
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Registro exitoso. Revisa tu correo si pide confirmación.')),
+      );
+      Navigator.pop(context);
+    } catch (e) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Registro falló: $e')),
+      );
+    } finally {
+      if (mounted) setState(() => loading = false);
+    }
+  }
+
+  @override
+  void dispose() {
+    email.dispose();
+    pass.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Registro')),
+      body: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 420),
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextField(
+                  controller: email,
+                  decoration: const InputDecoration(labelText: 'Correo'),
+                  keyboardType: TextInputType.emailAddress,
+                ),
+                const SizedBox(height: 12),
+                TextField(
+                  controller: pass,
+                  obscureText: true,
+                  decoration: const InputDecoration(labelText: 'Contraseña'),
+                ),
+                const SizedBox(height: 16),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: loading ? null : _register,
+                    child: loading
+                        ? const SizedBox(height: 18, width: 18, child: CircularProgressIndicator(strokeWidth: 2))
+                        : const Text('Crear cuenta'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/core/env.dart">
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
+class Env {
+  static String get supabaseUrl => dotenv.env['SUPABASE_URL'] ?? '';
+  static String get supabaseAnonKey => dotenv.env['SUPABASE_ANON_KEY'] ?? '';
+  static String get resetApiUrl => dotenv.env['RESET_API_URL'] ?? '';
+
+  static void validate() {
+    if (supabaseUrl.trim().isEmpty || supabaseAnonKey.trim().isEmpty) {
+      throw Exception('Faltan SUPABASE_URL o SUPABASE_ANON_KEY en .env');
+    }
+  }
+}
+</file>
+
+<file path="lib/core/offer_service.dart">
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+class OfferService {
+  final _client = Supabase.instance.client;
+
+  /// Devuelve ofertas activas del producto. Si dayOfWeek != null, filtra por día.
+  Future<List<Map<String, dynamic>>> getOffersForProduct(
+    String productId, {
+    int? dayOfWeek,
+  }) async {
+    final q = _client
+        .from('product_offers')
+        .select()
+        .eq('product_id', productId)
+        .eq('is_active', true);
+
+    final res = await q.order('created_at', ascending: false);
+    final list = (res as List).cast<Map<String, dynamic>>();
+
+    if (dayOfWeek == null) return list;
+
+    // Mostrar las que son del día o las que no tienen día (válidas siempre)
+    return list.where((o) {
+      final d = o['day_of_week'];
+      if (d == null) return true;
+      return (d is int ? d : int.tryParse(d.toString())) == dayOfWeek;
+    }).toList();
+  }
+
+  Future<void> createOffer({
+    required String productId,
+    required String type, // promo|combo|offer
+    required String title,
+    String? details,
+    double extraPrice = 0,
+    double discountPercent = 0,
+    int? dayOfWeek, // 1..7 (Lunes..Domingo)
+    String? freeItem, // ej: "Helado gratis"
+  }) async {
+    await _client.from('product_offers').insert({
+      'product_id': productId,
+      'type': type,
+      'title': title,
+      'details': details,
+      'extra_price': extraPrice,
+      'discount_percent': discountPercent,
+      'day_of_week': dayOfWeek,
+      'free_item': freeItem,
+      'is_active': true,
+    });
+  }
+
+  Future<void> toggleOfferActive(String offerId, bool active) async {
+    await _client.from('product_offers').update({'is_active': active}).eq('id', offerId);
+  }
+
+  Future<void> deleteOffer(String offerId) async {
+    await _client.from('product_offers').delete().eq('id', offerId);
+  }
+}
+</file>
+
+<file path="lib/core/order_service.dart">
+import 'dart:math';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import '../models/cart_item.dart';
+
+class OrderService {
+  final SupabaseClient _client = Supabase.instance.client;
+
+  String _makeRefCode() {
+    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    final r = Random.secure();
+    final part = List.generate(6, (_) => chars[r.nextInt(chars.length)]).join();
+    return 'FF-$part';
+  }
+
+  /// Retorna: { id: uuid, reference: FF-XXXXXX }
+  Future<Map<String, String>> createOrder({
+    required String name,
+    required String phone,
+    required String address,
+    required String email,
+    required List<CartItem> cart,
+    required double total,
+  }) async {
+    final uid = _client.auth.currentUser?.id;
+    if (uid == null) throw Exception('No hay sesión activa');
+
+    // Reintento por si reference_code choca (muy raro)
+    Map<String, dynamic>? order;
+    String ref = '';
+
+    for (var i = 0; i < 5; i++) {
+      ref = _makeRefCode();
+      try {
+        order = await _client
+            .from('orders')
+            .insert({
+              'user_id': uid,
+              'customer_name': name,
+              'customer_phone': phone,
+              'customer_address': address,
+              'customer_email': email,
+              'status': 'pending',
+              'total': total,
+              'reference_code': ref,
+            })
+            .select()
+            .single();
+        break;
+      } catch (_) {
+        if (i == 4) rethrow;
+      }
+    }
+
+    final orderId = order!['id'].toString();
+
+    final items = cart.map((c) {
+      return {
+        'order_id': orderId,
+        'product_id': c.product.id,
+        'product_name': c.product.name,
+        'unit_price': c.product.price,
+        'quantity': c.quantity,
+        'selected_offer_title': c.selectedOfferTitle,
+        'selected_offer_extra': c.selectedOfferExtra,
+        // guardar info útil en texto (si quieres verlo luego)
+        'selected_offer_title': c.selectedOfferTitle,
+        'selected_offer_extra': c.selectedOfferExtra,
+      };
+    }).toList();
+
+    if (items.isNotEmpty) {
+      await _client.from('order_items').insert(items);
+    }
+
+    return {'id': orderId, 'reference': ref};
+  }
+
+  Future<List<Map<String, dynamic>>> getMyOrders() async {
+    final uid = _client.auth.currentUser?.id;
+    if (uid == null) return [];
+
+    final res = await _client
+        .from('orders')
+        .select()
+        .eq('user_id', uid)
+        .order('created_at', ascending: false);
+
+    return (res as List).cast<Map<String, dynamic>>();
+  }
+
+  Future<List<Map<String, dynamic>>> getAllOrdersEmployee() async {
+    final res = await _client.from('orders').select().order('created_at', ascending: false);
+    return (res as List).cast<Map<String, dynamic>>();
+  }
+
+  Future<List<Map<String, dynamic>>> getOrderItems(String orderId) async {
+    final res = await _client.from('order_items').select().eq('order_id', orderId);
+    return (res as List).cast<Map<String, dynamic>>();
+  }
+
+  Future<void> updateOrderStatus(String orderId, String status) async {
+    await _client.from('orders').update({'status': status}).eq('id', orderId);
+  }
+
+  RealtimeChannel subscribeOrder(
+    String orderId,
+    void Function(Map<String, dynamic> newRow) onUpdate,
+  ) {
+    final channel = _client.channel('order-$orderId');
+
+    channel.onPostgresChanges(
+      event: PostgresChangeEvent.update,
+      schema: 'public',
+      table: 'orders',
+      filter: PostgresChangeFilter(
+        type: PostgresChangeFilterType.eq,
+        column: 'id',
+        value: orderId,
+      ),
+      callback: (payload) {
+        final newRow = (payload.newRecord ?? {}) as Map<String, dynamic>;
+        onUpdate(newRow);
+      },
+    );
+
+    channel.subscribe();
+    return channel;
+  }
+}
+</file>
+
+<file path="lib/core/product_service.dart">
+import 'dart:io';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import '../models/product.dart';
+
+class ProductService {
+  final _client = Supabase.instance.client;
+
+  Future<List<Product>> fetchProducts() async {
+    final res = await _client.from('products').select().order('created_at', ascending: false);
+    return (res as List).map((e) => Product.fromJson(e as Map<String, dynamic>)).toList();
+  }
+
+  Future<Product> createProduct(Product p) async {
+    final res = await _client.from('products').insert(p.toInsertJson()).select().single();
+    return Product.fromJson(res);
+  }
+
+  Future<Product> updateProduct(Product p) async {
+    final res = await _client.from('products').update(p.toUpdateJson()).eq('id', p.id).select().single();
+    return Product.fromJson(res);
+  }
+
+  Future<void> deleteProduct(String id) async {
+    await _client.from('products').delete().eq('id', id);
+  }
+
+  Future<String> uploadProductImage({
+    required String productId,
+    required File file,
+  }) async {
+    final bytes = await file.readAsBytes();
+    final path = '$productId/${DateTime.now().millisecondsSinceEpoch}.jpg';
+
+    await _client.storage.from('product-images').uploadBinary(
+          path,
+          bytes,
+          fileOptions: const FileOptions(upsert: true, contentType: 'image/jpeg'),
+        );
+
+    return _client.storage.from('product-images').getPublicUrl(path);
+  }
+}
+</file>
+
+<file path="lib/core/role_service.dart">
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+class RoleService {
+  final _client = Supabase.instance.client;
+
+  Future<String> getMyRole() async {
+    final uid = _client.auth.currentUser?.id;
+    if (uid == null) return 'user';
+
+    final row = await _client.from('profiles').select('role').eq('id', uid).maybeSingle();
+    return (row?['role']?.toString() ?? 'user');
+  }
+}
+</file>
+
+<file path="lib/core/supabase_config.dart">
+import 'package:supabase_flutter/supabase_flutter.dart';
+import 'env.dart';
+
+class SupabaseConfig {
+  static Future<void> init() async {
+    Env.validate();
+    await Supabase.initialize(
+      url: Env.supabaseUrl,
+      anonKey: Env.supabaseAnonKey,
+      authOptions: const FlutterAuthClientOptions(
+        authFlowType: AuthFlowType.pkce,
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/core/theme.dart">
+import 'package:flutter/material.dart';
+
+ThemeData buildTheme() {
+  final scheme = ColorScheme.fromSeed(seedColor: const Color(0xFFe63946));
+  return ThemeData(
+    useMaterial3: true,
+    colorScheme: scheme,
+    scaffoldBackgroundColor: const Color(0xFFF7F7F7),
+    appBarTheme: AppBarTheme(
+      backgroundColor: scheme.surface,
+      foregroundColor: scheme.onSurface,
+      centerTitle: true,
+      elevation: 0,
+    ),
+    cardTheme: CardTheme(
+      color: Colors.white,
+      elevation: 0,
+      margin: EdgeInsets.zero,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+      filled: true,
+      fillColor: Colors.white,
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+      ),
+    ),
+  );
+}
+</file>
+
+<file path="lib/models/cart_item.dart">
+import 'product.dart';
+
+class CartItem {
+  final Product product;
+  int quantity;
+
+  // Oferta/Combo seleccionado
+  String? selectedOfferTitle;
+  double selectedOfferExtra;
+
+  /// Descuento porcentual (0-100) aplicado al precio base del producto.
+  double selectedDiscountPercent;
+
+  /// Texto opcional de regalo (ej: "Helado gratis"). No afecta el total.
+  String? selectedFreeItem;
+
+  CartItem({
+    required this.product,
+    this.quantity = 1,
+    this.selectedOfferTitle,
+    this.selectedOfferExtra = 0,
+    this.selectedDiscountPercent = 0,
+    this.selectedFreeItem,
+  });
+
+  double get unitPriceAfterDiscount {
+    final d = selectedDiscountPercent.clamp(0, 100);
+    return product.price * (1 - (d / 100));
+  }
+
+  double get unitPriceFinal => unitPriceAfterDiscount + selectedOfferExtra;
+
+  double get total => unitPriceFinal * quantity;
+}
+</file>
+
+<file path="lib/models/product.dart">
+class Product {
+  final String id;
+  final String name;
+  final String description;
+  final double price;
+  final String? imageUrl;
+  final String category;
+  final bool isAvailable;
+
+  const Product({
+    required this.id,
+    required this.name,
+    required this.description,
+    required this.price,
+    required this.category,
+    this.imageUrl,
+    this.isAvailable = true,
+  });
+
+  factory Product.fromJson(Map<String, dynamic> json) {
+    double toD(dynamic v) => (v is num) ? v.toDouble() : double.tryParse(v.toString()) ?? 0;
+
+    return Product(
+      id: json['id'].toString(),
+      name: (json['name'] ?? '').toString(),
+      description: (json['description'] ?? '').toString(),
+      price: toD(json['price']),
+      imageUrl: json['image_url']?.toString(),
+      category: (json['category'] ?? '').toString(),
+      isAvailable: (json['is_available'] ?? true) as bool,
+    );
+  }
+
+  Map<String, dynamic> toInsertJson() => {
+        'name': name,
+        'description': description,
+        'price': price,
+        'image_url': imageUrl,
+        'category': category,
+        'is_available': isAvailable,
+      };
+
+  Map<String, dynamic> toUpdateJson() => toInsertJson();
+
+  Product copyWith({
+    String? name,
+    String? description,
+    double? price,
+    String? imageUrl,
+    String? category,
+    bool? isAvailable,
+  }) {
+    return Product(
+      id: id,
+      name: name ?? this.name,
+      description: description ?? this.description,
+      price: price ?? this.price,
+      imageUrl: imageUrl ?? this.imageUrl,
+      category: category ?? this.category,
+      isAvailable: isAvailable ?? this.isAvailable,
+    );
+  }
+}
+</file>
+
+<file path="lib/screens/detail_screen.dart">
+import "package:flutter/material.dart";
+
+class DetailScreen extends StatefulWidget {
+  final String title;
+  final Color color;
+
+  const DetailScreen({super.key, required this.title, required this.color});
+
+  @override
+  State<DetailScreen> createState() => _DetailScreenState();
+}
+
+class _DetailScreenState extends State<DetailScreen> {
+  bool esCombo = false;
+  bool extraQueso = false;
+  bool extraTocino = false;
+  int salsaSeleccionada = 1;
+
+  @override
+  Widget build(BuildContext context) {
+    // WIDGET 1: Scaffold (Otra vez, estructura base)
+    return Scaffold(
+        appBar: AppBar(
+          title: Text(widget.title),
+          backgroundColor: widget.color,
+          foregroundColor: Colors.white,
+        ),
+
+        // WIDGET 10: ListView (Permite scroll si el contenido es largo)
+        body: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            Container(
+              height: 200,
+              decoration: BoxDecoration(
+                color: widget.color,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: const Center(
+                child: Icon(Icons.fastfood, size: 100, color: Colors.white54),
+              ),
+            ),
+            const SizedBox(height: 20),
+            const Text(
+              "Personaliza tu orden",
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
+
+            const Divider(),
+
+            // WIDGET 13: Switch (Interruptor)
+            ListTile(
+              title: const Text("¿Hacerlo combo? (Papas + Bebida)"),
+              subtitle: const Text("Adiciona \$1.50"),
+              trailing: Switch(
+                value: esCombo,
+                activeColor: Colors.orange,
+                onChanged: (bool value) {
+                  setState(() {
+                    esCombo = value;
+                  });
+                },
+              ),
+            ),
+
+            const Divider(),
+            const Text("Extras: ",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+
+            // WIDGET 13: Checkbox (Casilla de verificación)
+            CheckboxListTile(
+              title: const Text("Extra Queso (+\$0.50)"),
+              value: extraQueso,
+              onChanged: (bool? value) {
+                setState(() {
+                  extraQueso = value!;
+                });
+              },
+            ),
+
+            CheckboxListTile(
+              title: const Text("Extra Tocino (+\$0.50)"),
+              value: extraTocino,
+              onChanged: (bool? value) {
+                setState(() {
+                  extraTocino = value!;
+                });
+              },
+            ),
+
+            const Divider(),
+            const Text("Selecciona tu salsa: ",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+
+            // WIDGET 14: RadioListTile (Opciones de selección única)
+            RadioListTile<int>(
+              title: const Text("Salsa de tomate"),
+              value: 1,
+              groupValue: salsaSeleccionada,
+              onChanged: (int? value) {
+                setState(() {
+                  salsaSeleccionada = value!;
+                });
+              },
+            ),
+
+            RadioListTile<int>(
+              title: const Text("Mostaza"),
+              value: 2,
+              groupValue: salsaSeleccionada,
+              onChanged: (int? value) {
+                setState(() {
+                  salsaSeleccionada = value!;
+                });
+              },
+            ),
+
+            const SizedBox(height: 30),
+
+            // WIDGET 4: Row (Alinear botones horizontalmente)
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                // WIDGET 12: OutlinedButton (Botón con borde)
+                OutlinedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text("Cancelar"),
+                ),
+
+                // WIDGET 12: ElevatedButton (Botón principal)
+                ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.orange,
+                    foregroundColor: Colors.white,
+                  ),
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text("¡Pedido Agregado!")),
+                    );
+                  },
+                  icon: const Icon(Icons.check),
+                  label: const Text("Pedir Ahora"),
+                ),
+              ],
+            ),
+
+            const SizedBox(height: 10),
+            // WIDGET 12: TextButton (Botón solo texto)
+            Center(
+              child: TextButton(
+                onPressed: () {},
+                child: const Text("Ver Información Nutricional",
+                    style: TextStyle(decoration: TextDecoration.underline)),
+              ),
+            )
+          ],
+        ));
+  }
+}
+</file>
+
+<file path="lib/screens/home_screen.dart">
+import 'package:flutter/material.dart';
+import '../widgets/food_card.dart'; // Importamos la tarjeta
+import 'detail_screen.dart'; // Importamos la pantalla de detalle (NUEVO)
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // WIDGET 1: Scaffold (Estructura base)
+    return Scaffold(
+        // WIDGET 2: AppBar (Barra superior)
+        appBar: AppBar(
+          title: const Text("Policomida Rapida"),
+          centerTitle: true,
+          backgroundColor: Colors.orange,
+          foregroundColor: Colors.white,
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.shopping_cart),
+              onPressed: () {
+                // Acción al presionar el ícono del carrito
+              },
+            )
+          ],
+        ),
+        // WIDGET 3: Drawer (Menú lateral)
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.orange,
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.fastfood, size: 50, color: Colors.white),
+                    SizedBox(height: 10),
+                    Text(
+                      "Menú Principal",
+                      style: TextStyle(color: Colors.white, fontSize: 24),
+                    ),
+                  ],
+                ),
+              ),
+              ListTile(
+                leading: const Icon(Icons.home),
+                title: const Text("Inicio"),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.settings),
+                title: const Text("Configuración"),
+                onTap: () {},
+              )
+            ],
+          ),
+        ),
+        body: Column(
+          children: [
+            // WIDGET 7: Container (Fondo para el buscador)
+            Container(
+              padding: const EdgeInsets.all(16),
+              color: Colors.orange,
+              child: TextField(
+                // WIDGET 14: TextField
+                decoration: InputDecoration(
+                  hintText: "Buscar Comida",
+                  fillColor: Colors.white,
+                  filled: true,
+                  prefixIcon: const Icon(Icons.search),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30),
+                    borderSide: BorderSide.none,
+                  ),
+                  contentPadding: const EdgeInsets.symmetric(vertical: 0),
+                ),
+              ),
+            ),
+
+            // WIDGET 6: Expanded (Ocupar el resto de la pantalla)
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(12.0),
+                // WIDGET 11: GridView (Cuadrícula de productos)
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 12,
+                  crossAxisSpacing: 12,
+                  childAspectRatio: 0.8,
+                  // NOTA: Quitamos 'const' aquí porque los GestureDetector no son constantes
+                  children: [
+                    // ITEM 1: CON NAVEGACIÓN
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const DetailScreen(
+                                title: "Hamburgesa doble", color: Colors.brown),
+                          ),
+                        );
+                      },
+                      child: const FoodCard(
+                          title: "Hamburgesa doble",
+                          price: "\$2.50",
+                          color: Colors.brown),
+                    ),
+
+                    // ITEM 2: CON NAVEGACIÓN
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const DetailScreen(
+                                title: "Hot Dog", color: Colors.red),
+                          ),
+                        );
+                      },
+                      child: const FoodCard(
+                          title: "Hot Dog", price: "\$1.50", color: Colors.red),
+                    ),
+
+                    // RESTO DE ITEMS (Sin navegación por ahora, solo visuales)
+                    const FoodCard(
+                        title: "Papas Fritas",
+                        price: "\$1.00",
+                        color: Colors.yellow),
+                    const FoodCard(
+                        title: "Nuggets x10",
+                        price: "\$2.00",
+                        color: Colors.orangeAccent),
+                    const FoodCard(
+                        title: "Cola Grande",
+                        price: "\$1.00",
+                        color: Colors.black45),
+                    const FoodCard(
+                        title: "Helado Mix",
+                        price: "\$1.50",
+                        color: Colors.pinkAccent),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ));
+  }
+}
+</file>
+
+<file path="lib/state/app_state.dart">
+import 'package:flutter/material.dart';
+import '../models/cart_item.dart';
+import '../models/product.dart';
+import '../core/product_service.dart';
+
+class AppState extends ChangeNotifier {
+  final productService = ProductService();
+
+  List<Product> products = [];
+  List<CartItem> cart = [];
+  bool loading = false;
+  String? error;
+
+  String selectedCategory = 'Todos';
+  String search = '';
+
+  List<String> get categories {
+    final set = <String>{'Todos'};
+    for (final p in products) {
+      if (p.category.trim().isNotEmpty) set.add(p.category.trim());
+    }
+    return set.toList();
+  }
+
+  List<Product> get filteredProducts {
+    var list = products;
+
+    if (selectedCategory != 'Todos') {
+      list = list.where((p) => p.category == selectedCategory).toList();
+    }
+
+    if (search.trim().isNotEmpty) {
+      final s = search.trim().toLowerCase();
+      list = list.where((p) => p.name.toLowerCase().contains(s)).toList();
+    }
+
+    return list;
+  }
+
+  void setCategory(String c) {
+    selectedCategory = c;
+    notifyListeners();
+  }
+
+  void setSearch(String s) {
+    search = s;
+    notifyListeners();
+  }
+
+  Future<void> loadProducts() async {
+    loading = true;
+    error = null;
+    notifyListeners();
+
+    try {
+      products = await productService.fetchProducts();
+    } catch (e) {
+      error = e.toString();
+    } finally {
+      loading = false;
+      notifyListeners();
+    }
+  }
+
+  Future<Product> createAndReturnProduct(Product p) async {
+    final created = await productService.createProduct(p);
+    products.insert(0, created);
+    notifyListeners();
+    return created;
+  }
+
+  Future<void> createProduct(Product p) async {
+    final created = await productService.createProduct(p);
+    products.insert(0, created);
+    notifyListeners();
+  }
+
+  Future<void> updateProduct(Product p) async {
+    final updated = await productService.updateProduct(p);
+    final idx = products.indexWhere((x) => x.id == updated.id);
+    if (idx != -1) products[idx] = updated;
+    notifyListeners();
+  }
+
+  Future<void> deleteProduct(String id) async {
+    await productService.deleteProduct(id);
+    products.removeWhere((p) => p.id == id);
+    notifyListeners();
+  }
+
+  void addToCart(
+    Product p, {
+    int qty = 1,
+    String? offerTitle,
+    double offerExtra = 0,
+    double discountPercent = 0,
+    String? freeItem,
+  }) {
+    final idx = cart.indexWhere((c) =>
+        c.product.id == p.id &&
+        c.selectedOfferTitle == offerTitle &&
+        c.selectedOfferExtra == offerExtra &&
+        c.selectedDiscountPercent == discountPercent &&
+        c.selectedFreeItem == freeItem);
+
+    if (idx != -1) {
+      cart[idx].quantity += qty;
+    } else {
+      cart.add(
+        CartItem(
+          product: p,
+          quantity: qty,
+          selectedOfferTitle: offerTitle,
+          selectedOfferExtra: offerExtra,
+          selectedDiscountPercent: discountPercent,
+          selectedFreeItem: freeItem,
+        ),
+      );
+    }
+    notifyListeners();
+  }
+
+  void setQty(int index, int qty) {
+    if (index < 0 || index >= cart.length) return;
+    cart[index].quantity = qty.clamp(1, 99);
+    notifyListeners();
+  }
+
+  void removeFromCart(int index) {
+    if (index < 0 || index >= cart.length) return;
+    cart.removeAt(index);
+    notifyListeners();
+  }
+
+  void clearCart() {
+    cart.clear();
+    notifyListeners();
+  }
+
+  double get total => cart.fold(0.0, (sum, it) => sum + it.total);
+}
+</file>
+
+<file path="lib/ui/cart_screen.dart">
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../state/app_state.dart';
+import 'checkout_screen.dart';
+
+class CartScreen extends StatelessWidget {
+  const CartScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final app = context.watch<AppState>();
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('Carrito')),
+      body: app.cart.isEmpty
+          ? const Center(child: Text('Carrito vacío'))
+          : Column(
+              children: [
+                Expanded(
+                  child: ListView.builder(
+                    itemCount: app.cart.length,
+                    itemBuilder: (_, i) {
+                      final item = app.cart[i];
+
+                      final promo = item.selectedOfferTitle ?? 'Sin oferta';
+                      final disc = item.selectedDiscountPercent > 0
+                          ? ' -${item.selectedDiscountPercent.toStringAsFixed(0)}%'
+                          : '';
+                      final gift = (item.selectedFreeItem != null && item.selectedFreeItem!.trim().isNotEmpty)
+                          ? ' • Regalo: ${item.selectedFreeItem}'
+                          : '';
+
+                      return ListTile(
+                        title: Text(item.product.name),
+                        subtitle: Text('$promo$disc$gift\nUnit: \$${item.unitPriceFinal.toStringAsFixed(2)}'),
+                        isThreeLine: true,
+                        trailing: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            IconButton(
+                              onPressed: () => app.setQty(i, item.quantity - 1),
+                              icon: const Icon(Icons.remove),
+                            ),
+                            Text('${item.quantity}'),
+                            IconButton(
+                              onPressed: () => app.setQty(i, item.quantity + 1),
+                              icon: const Icon(Icons.add),
+                            ),
+                            IconButton(
+                              onPressed: () => app.removeFromCart(i),
+                              icon: const Icon(Icons.delete_outline),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    children: [
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: Text(
+                          'Total: \$${app.total.toStringAsFixed(2)}',
+                          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                          onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (_) => const CheckoutScreen()),
+                          ),
+                          child: const Text('Checkout'),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/checkout_screen.dart">
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+import '../state/app_state.dart';
+import '../core/order_service.dart';
+import 'order_status_screen.dart';
+
+class CheckoutScreen extends StatefulWidget {
+  const CheckoutScreen({super.key});
+
+  @override
+  State<CheckoutScreen> createState() => _CheckoutScreenState();
+}
+
+class _CheckoutScreenState extends State<CheckoutScreen> {
+  final name = TextEditingController();
+  final phone = TextEditingController();
+  final address = TextEditingController();
+  bool loading = false;
+
+  @override
+  void dispose() {
+    name.dispose();
+    phone.dispose();
+    address.dispose();
+    super.dispose();
+  }
+
+  Future<void> _placeOrder() async {
+    final app = context.read<AppState>();
+    final email = Supabase.instance.client.auth.currentUser?.email ?? '';
+
+    if (name.text.trim().isEmpty || phone.text.trim().isEmpty || address.text.trim().isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Complete nombre, teléfono y dirección.')),
+      );
+      return;
+    }
+
+    if (app.cart.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Carrito vacío.')));
+      return;
+    }
+
+    setState(() => loading = true);
+    try {
+      final result = await OrderService().createOrder(
+        name: name.text.trim(),
+        phone: phone.text.trim(),
+        address: address.text.trim(),
+        email: email,
+        cart: app.cart,
+        total: app.total,
+      );
+
+      final orderId = result['id']!;
+      final ref = result['reference']!;
+
+      app.clearCart();
+
+      if (!mounted) return;
+
+      await showDialog(
+        context: context,
+        builder: (dialogCtx) => AlertDialog(
+          title: const Text('Pedido confirmado'),
+          content: Text('Pedido registrado.\n\nCódigo de referencia: $ref'),
+          actions: [
+            TextButton(onPressed: () => Navigator.pop(dialogCtx), child: const Text('OK')),
+          ],
+        ),
+      );
+
+      if (!mounted) return;
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => OrderStatusScreen(orderId: orderId)),
+      );
+    } catch (e) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Error: $e')));
+    } finally {
+      if (mounted) setState(() => loading = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final email = Supabase.instance.client.auth.currentUser?.email ?? '';
+    final app = context.watch<AppState>();
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('Checkout')),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: ListView(
+          children: [
+            Text('Correo: $email', style: const TextStyle(fontWeight: FontWeight.bold)),
+            const SizedBox(height: 12),
+            TextField(controller: name, decoration: const InputDecoration(labelText: 'Nombre')),
+            const SizedBox(height: 12),
+            TextField(
+              controller: phone,
+              keyboardType: TextInputType.phone,
+              decoration: const InputDecoration(labelText: 'Teléfono'),
+            ),
+            const SizedBox(height: 12),
+            TextField(
+              controller: address,
+              decoration: const InputDecoration(labelText: 'Dirección'),
+              maxLines: 2,
+            ),
+            const SizedBox(height: 16),
+            Text('Total: \$${app.total.toStringAsFixed(2)}', style: const TextStyle(fontWeight: FontWeight.bold)),
+            const SizedBox(height: 16),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: loading ? null : _placeOrder,
+                child: loading ? const CircularProgressIndicator() : const Text('Confirmar pedido'),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/employee_home_screen.dart">
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../auth/auth_service.dart';
+import '../state/app_state.dart';
+
+import 'employee_orders_screen.dart';
+import 'employee_products_screen.dart';
+import 'product_detail_screen.dart';
+
+class EmployeeHomeScreen extends StatefulWidget {
+  const EmployeeHomeScreen({super.key});
+
+  @override
+  State<EmployeeHomeScreen> createState() => _EmployeeHomeScreenState();
+}
+
+class _EmployeeHomeScreenState extends State<EmployeeHomeScreen> {
+  int index = 0;
+
+  Future<void> _logout(BuildContext context) async {
+    await AuthService().logout();
+    if (!mounted) return;
+
+    // Importante: limpiar stack. main.dart se encarga de mostrar LoginScreen
+    Navigator.of(context).popUntil((route) => route.isFirst);
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Sesión cerrada')),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final app = context.watch<AppState>();
+
+    final pages = [
+      _EmployeeProductsHome(app: app),
+      const EmployeeOrdersScreen(),
+    ];
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(index == 0 ? 'Productos (Empleado)' : 'Pedidos (Empleado)'),
+        actions: [
+          IconButton(
+            tooltip: 'Refrescar',
+            icon: const Icon(Icons.refresh),
+            onPressed: () => context.read<AppState>().loadProducts(),
+          ),
+          IconButton(
+            tooltip: 'Cerrar sesión',
+            icon: const Icon(Icons.logout),
+            onPressed: () => _logout(context),
+          ),
+        ],
+      ),
+      body: pages[index],
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: index,
+        onDestinationSelected: (i) => setState(() => index = i),
+        destinations: const [
+          NavigationDestination(icon: Icon(Icons.storefront_outlined), label: 'Productos'),
+          NavigationDestination(icon: Icon(Icons.receipt_long_outlined), label: 'Pedidos'),
+        ],
+      ),
+      floatingActionButton: index == 0
+          ? FloatingActionButton.extended(
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const EmployeeProductsScreen()),
+              ),
+              icon: const Icon(Icons.add),
+              label: const Text('Nuevo'),
+            )
+          : null,
+    );
+  }
+}
+
+class _EmployeeProductsHome extends StatelessWidget {
+  final AppState app;
+  const _EmployeeProductsHome({required this.app});
+
+  @override
+  Widget build(BuildContext context) {
+    if (app.loading) return const Center(child: CircularProgressIndicator());
+    if (app.error != null) return Center(child: Text('Error: ${app.error}'));
+
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(12, 12, 12, 8),
+          child: TextField(
+            decoration: const InputDecoration(
+              prefixIcon: Icon(Icons.search),
+              hintText: 'Buscar productos...',
+            ),
+            onChanged: app.setSearch,
+          ),
+        ),
+        SizedBox(
+          height: 48,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            children: app.categories.map((c) {
+              final selected = app.selectedCategory == c;
+              return Padding(
+                padding: const EdgeInsets.only(right: 8),
+                child: ChoiceChip(
+                  label: Text(c),
+                  selected: selected,
+                  onSelected: (_) => app.setCategory(c),
+                ),
+              );
+            }).toList(),
+          ),
+        ),
+        Expanded(
+          child: app.filteredProducts.isEmpty
+              ? const Center(child: Text('No hay productos para mostrar.'))
+              : GridView.builder(
+                  padding: const EdgeInsets.all(12),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    childAspectRatio: 0.78,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                  ),
+                  itemCount: app.filteredProducts.length,
+                  itemBuilder: (_, i) {
+                    final p = app.filteredProducts[i];
+
+                    return Card(
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(16),
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => ProductDetailScreen(product: p)),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: Stack(
+                                  children: [
+                                    Container(
+                                      width: double.infinity,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(12),
+                                        color: Colors.black12,
+                                        image: p.imageUrl == null
+                                            ? null
+                                            : DecorationImage(
+                                                image: NetworkImage(p.imageUrl!),
+                                                fit: BoxFit.cover,
+                                              ),
+                                      ),
+                                      child: p.imageUrl == null
+                                          ? const Center(child: Icon(Icons.image, size: 40))
+                                          : null,
+                                    ),
+                                    Positioned(
+                                      right: 6,
+                                      top: 6,
+                                      child: Row(
+                                        children: [
+                                          IconButton(
+                                            style: IconButton.styleFrom(backgroundColor: Colors.white),
+                                            icon: const Icon(Icons.edit, size: 18),
+                                            onPressed: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (_) => EmployeeProductsScreen(editProductId: p.id),
+                                                ),
+                                              );
+                                            },
+                                          ),
+                                          const SizedBox(width: 6),
+                                          IconButton(
+                                            style: IconButton.styleFrom(backgroundColor: Colors.white),
+                                            icon: const Icon(Icons.delete, size: 18),
+                                            onPressed: () async {
+                                              final ok = await showDialog<bool>(
+                                                context: context,
+                                                builder: (dialogCtx) => AlertDialog(
+                                                  title: const Text('Eliminar producto'),
+                                                  content: Text('Se eliminará "${p.name}".'),
+                                                  actions: [
+                                                    TextButton(
+                                                      onPressed: () => Navigator.pop(dialogCtx, false),
+                                                      child: const Text('Cancelar'),
+                                                    ),
+                                                    ElevatedButton(
+                                                      onPressed: () => Navigator.pop(dialogCtx, true),
+                                                      child: const Text('Eliminar'),
+                                                    ),
+                                                  ],
+                                                ),
+                                              );
+
+                                              if (ok == true) {
+                                                await context.read<AppState>().deleteProduct(p.id);
+                                                if (!context.mounted) return;
+                                                ScaffoldMessenger.of(context).showSnackBar(
+                                                  const SnackBar(content: Text('Producto eliminado')),
+                                                );
+                                              }
+                                            },
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(height: 8),
+                              Text(p.name, style: const TextStyle(fontWeight: FontWeight.bold)),
+                              Text('\$${p.price.toStringAsFixed(2)}'),
+                            ],
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+        ),
+      ],
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/employee_orders_screen.dart">
+import 'package:flutter/material.dart';
+import '../core/order_service.dart';
+
+class EmployeeOrdersScreen extends StatefulWidget {
+  const EmployeeOrdersScreen({super.key});
+
+  @override
+  State<EmployeeOrdersScreen> createState() => _EmployeeOrdersScreenState();
+}
+
+class _EmployeeOrdersScreenState extends State<EmployeeOrdersScreen> {
+  final service = OrderService();
+  bool loading = true;
+  List<Map<String, dynamic>> orders = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  Future<void> _load() async {
+    final data = await service.getAllOrdersEmployee();
+    setState(() {
+      orders = data;
+      loading = false;
+    });
+  }
+
+  Future<void> _setStatus(String orderId, String status) async {
+    await service.updateOrderStatus(orderId, status);
+    await _load();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Pedidos'),
+        actions: [
+          IconButton(icon: const Icon(Icons.refresh), onPressed: _load),
+        ],
+      ),
+      body: loading
+          ? const Center(child: CircularProgressIndicator())
+          : ListView.builder(
+              itemCount: orders.length,
+              itemBuilder: (_, i) {
+                final o = orders[i];
+                final id = o['id'].toString();
+                return Card(
+                  margin: const EdgeInsets.all(10),
+                  child: Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Pedido: $id', style: const TextStyle(fontWeight: FontWeight.bold)),
+                        Text('Cliente: ${o['customer_name']}'),
+                        Text('Dirección: ${o['customer_address']}'),
+                        Text('Teléfono: ${o['customer_phone']}'),
+                        Text('Correo: ${o['customer_email']}'),
+                        const SizedBox(height: 8),
+                        Text('Estado actual: ${o['status']}'),
+                        const SizedBox(height: 8),
+                        Wrap(
+                          spacing: 8,
+                          children: [
+                            ElevatedButton(
+                              onPressed: () => _setStatus(id, 'preparing'),
+                              child: const Text('Preparando'),
+                            ),
+                            ElevatedButton(
+                              onPressed: () => _setStatus(id, 'on_the_way'),
+                              child: const Text('En camino'),
+                            ),
+                            ElevatedButton(
+                              onPressed: () => _setStatus(id, 'delivered'),
+                              child: const Text('Entregado'),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              },
+            ),
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/employee_products_screen.dart">
+import 'dart:io';
+
+import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:provider/provider.dart';
+
+import '../core/offer_service.dart';
+import '../models/product.dart';
+import '../state/app_state.dart';
+
+class EmployeeProductsScreen extends StatefulWidget {
+  /// Si viene un id, abre automáticamente el formulario de edición de ese producto
+  final String? editProductId;
+
+  const EmployeeProductsScreen({super.key, this.editProductId});
+
+  @override
+  State<EmployeeProductsScreen> createState() => _EmployeeProductsScreenState();
+}
+
+class _EmployeeProductsScreenState extends State<EmployeeProductsScreen> {
+  bool _openedAuto = false;
+  final _offersApi = OfferService();
+
+  Future<File?> _pickImage() async {
+    final picker = ImagePicker();
+    final x = await picker.pickImage(source: ImageSource.gallery, imageQuality: 80);
+    if (x == null) return null;
+    return File(x.path);
+  }
+
+  String _weekdayName(int w) {
+    // 1..7
+    switch (w) {
+      case 1:
+        return 'Lunes';
+      case 2:
+        return 'Martes';
+      case 3:
+        return 'Miércoles';
+      case 4:
+        return 'Jueves';
+      case 5:
+        return 'Viernes';
+      case 6:
+        return 'Sábado';
+      case 7:
+        return 'Domingo';
+      default:
+        return '—';
+    }
+  }
+
+  double _toDouble(dynamic v) {
+    if (v is num) return v.toDouble();
+    return double.tryParse(v?.toString() ?? '') ?? 0;
+  }
+
+  int? _toInt(dynamic v) {
+    if (v == null) return null;
+    if (v is int) return v;
+    return int.tryParse(v.toString());
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    // Si llegó desde la home con editProductId, abrir el form una sola vez
+    if (!_openedAuto && widget.editProductId != null) {
+      _openedAuto = true;
+      final app = context.read<AppState>();
+      final p = app.products.firstWhere(
+        (e) => e.id == widget.editProductId,
+        orElse: () => Product(
+          id: 'tmp',
+          name: '',
+          description: '',
+          price: 0,
+          category: 'Hamburguesas',
+          imageUrl: null,
+          isAvailable: true,
+        ),
+      );
+      if (p.id != 'tmp') {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          _openForm(context, product: p);
+        });
+      }
+    }
+  }
+
+  Future<void> _openForm(BuildContext context, {Product? product}) async {
+    final app = context.read<AppState>();
+
+    final name = TextEditingController(text: product?.name ?? '');
+    final desc = TextEditingController(text: product?.description ?? '');
+    final price = TextEditingController(text: product?.price.toString() ?? '');
+    final category = TextEditingController(text: product?.category ?? 'Hamburguesas');
+    final imageUrl = TextEditingController(text: product?.imageUrl ?? '');
+    bool isAvailable = product?.isAvailable ?? true;
+
+    File? picked;
+
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (_) => StatefulBuilder(
+        builder: (ctx, setLocal) => AlertDialog(
+          title: Text(product == null ? 'Nuevo producto' : 'Editar producto'),
+          content: SizedBox(
+            width: 520,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  // Preview
+                  Container(
+                    height: 170,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(14),
+                      color: Colors.black12,
+                      image: picked != null
+                          ? DecorationImage(image: FileImage(picked!), fit: BoxFit.cover)
+                          : (imageUrl.text.trim().isNotEmpty
+                              ? DecorationImage(image: NetworkImage(imageUrl.text.trim()), fit: BoxFit.cover)
+                              : null),
+                    ),
+                    child: (picked == null && imageUrl.text.trim().isEmpty)
+                        ? const Center(child: Icon(Icons.image, size: 42))
+                        : null,
+                  ),
+                  const SizedBox(height: 12),
+
+                  TextField(controller: name, decoration: const InputDecoration(labelText: 'Nombre')),
+                  const SizedBox(height: 10),
+                  TextField(controller: desc, decoration: const InputDecoration(labelText: 'Descripción'), maxLines: 2),
+                  const SizedBox(height: 10),
+                  TextField(controller: price, keyboardType: TextInputType.number, decoration: const InputDecoration(labelText: 'Precio')),
+                  const SizedBox(height: 10),
+                  TextField(controller: category, decoration: const InputDecoration(labelText: 'Categoría (ej: Hamburguesas, Snacks...)')),
+                  const SizedBox(height: 10),
+
+                  SwitchListTile(
+                    value: isAvailable,
+                    onChanged: (v) => setLocal(() => isAvailable = v),
+                    title: const Text('Disponible'),
+                    subtitle: const Text('Si está apagado, se mostrará como no disponible'),
+                  ),
+
+                  const Divider(height: 22),
+
+                  TextField(
+                    controller: imageUrl,
+                    decoration: const InputDecoration(labelText: 'Imagen (URL opcional)', hintText: 'https://...'),
+                    onChanged: (_) => setLocal(() {}),
+                  ),
+
+                  const SizedBox(height: 12),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: ElevatedButton.icon(
+                          onPressed: () async {
+                            picked = await _pickImage();
+                            setLocal(() {});
+                          },
+                          icon: const Icon(Icons.image_outlined),
+                          label: const Text('Elegir imagen (archivo)'),
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      OutlinedButton.icon(
+                        onPressed: () {
+                          picked = null;
+                          imageUrl.clear();
+                          setLocal(() {});
+                        },
+                        icon: const Icon(Icons.delete_outline),
+                        label: const Text('Quitar'),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+          actions: [
+            TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Cancelar')),
+            ElevatedButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Guardar')),
+          ],
+        ),
+      ),
+    );
+
+    if (ok != true) return;
+
+    final nameV = name.text.trim();
+    final descV = desc.text.trim();
+    final catV = category.text.trim().isEmpty ? 'General' : category.text.trim();
+    final priceV = double.tryParse(price.text.trim()) ?? 0;
+
+    if (nameV.isEmpty) {
+      if (!context.mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('El nombre es obligatorio.')));
+      return;
+    }
+
+    String? finalImageUrl = imageUrl.text.trim().isEmpty ? null : imageUrl.text.trim();
+
+    // NUEVO -> crear para obtener id real -> subir imagen si es archivo
+    if (product == null) {
+      final created = await app.createAndReturnProduct(
+        Product(
+          id: 'tmp',
+          name: nameV,
+          description: descV,
+          price: priceV,
+          category: catV,
+          imageUrl: picked != null ? null : finalImageUrl,
+          isAvailable: isAvailable,
+        ),
+      );
+
+      if (picked != null) {
+        final uploaded = await app.productService.uploadProductImage(productId: created.id, file: picked!);
+        await app.updateProduct(created.copyWith(imageUrl: uploaded));
+      }
+    } else {
+      if (picked != null) {
+        final uploaded = await app.productService.uploadProductImage(productId: product.id, file: picked!);
+        finalImageUrl = uploaded;
+      }
+
+      await app.updateProduct(
+        product.copyWith(
+          name: nameV,
+          description: descV,
+          price: priceV,
+          category: catV,
+          imageUrl: finalImageUrl,
+          isAvailable: isAvailable,
+        ),
+      );
+    }
+  }
+
+  // -------------------- PROMOS UI --------------------
+
+  Future<void> _openPromos(BuildContext context, Product product) async {
+    await showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      showDragHandle: true,
+      builder: (sheetCtx) {
+        return DraggableScrollableSheet(
+          expand: false,
+          initialChildSize: 0.82,
+          minChildSize: 0.55,
+          maxChildSize: 0.95,
+          builder: (ctx, scrollController) {
+            return Padding(
+              padding: EdgeInsets.only(
+                left: 14,
+                right: 14,
+                top: 6,
+                bottom: MediaQuery.of(ctx).viewInsets.bottom + 12,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Promos / Ofertas / Combos', style: Theme.of(ctx).textTheme.titleLarge),
+                  const SizedBox(height: 4),
+                  Text(product.name, style: Theme.of(ctx).textTheme.bodyMedium),
+                  const SizedBox(height: 12),
+
+                  // Botón crear
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton.icon(
+                      onPressed: () async {
+                        await _openCreateOffer(ctx, product);
+                        if (!ctx.mounted) return;
+                        // Recargar lista
+                        (ctx as Element).markNeedsBuild();
+                      },
+                      icon: const Icon(Icons.add),
+                      label: const Text('Crear promo/oferta/combo'),
+                    ),
+                  ),
+
+                  const SizedBox(height: 10),
+
+                  Expanded(
+                    child: FutureBuilder<List<Map<String, dynamic>>>(
+                      future: _offersApi.getOffersForProduct(product.id),
+                      builder: (ctx2, snap) {
+                        if (snap.connectionState != ConnectionState.done) {
+                          return const Center(child: CircularProgressIndicator());
+                        }
+                        if (snap.hasError) {
+                          return Center(child: Text('Error cargando ofertas: ${snap.error}'));
+                        }
+                        final offers = snap.data ?? [];
+                        if (offers.isEmpty) {
+                          return const Center(child: Text('No hay ofertas aún para este producto.'));
+                        }
+
+                        return ListView.separated(
+                          controller: scrollController,
+                          itemCount: offers.length,
+                          separatorBuilder: (_, __) => const SizedBox(height: 10),
+                          itemBuilder: (_, i) {
+                            final o = offers[i];
+
+                            final id = o['id'].toString();
+                            final title = (o['title'] ?? '').toString();
+                            final type = (o['type'] ?? '').toString();
+                            final details = (o['details'] ?? '').toString();
+                            final isActive = (o['is_active'] ?? true) == true;
+                            final extra = _toDouble(o['extra_price']);
+                            final discount = _toDouble(o['discount_percent']);
+                            final day = _toInt(o['day_of_week']);
+                            final freeItem = (o['free_item'] ?? '').toString().trim();
+
+                            final chips = <Widget>[
+                              Chip(label: Text(type.toUpperCase())),
+                              if (day != null) Chip(label: Text(_weekdayName(day))),
+                              if (discount > 0) Chip(label: Text('-${discount.toStringAsFixed(0)}%')),
+                              if (extra != 0) Chip(label: Text('+\$${extra.toStringAsFixed(2)}')),
+                              if (freeItem.isNotEmpty) Chip(label: Text('Regalo')),
+                            ];
+
+                            return Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(12),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                          child: Text(
+                                            title,
+                                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                                          ),
+                                        ),
+                                        Switch(
+                                          value: isActive,
+                                          onChanged: (v) async {
+                                            await _offersApi.toggleOfferActive(id, v);
+                                            if (!ctx2.mounted) return;
+                                            (ctx2 as Element).markNeedsBuild();
+                                          },
+                                        ),
+                                      ],
+                                    ),
+                                    if (details.trim().isNotEmpty) Text(details),
+                                    const SizedBox(height: 10),
+                                    Wrap(spacing: 8, runSpacing: 6, children: chips),
+                                    const SizedBox(height: 6),
+                                    Align(
+                                      alignment: Alignment.centerRight,
+                                      child: TextButton.icon(
+                                        onPressed: () async {
+                                          final ok = await showDialog<bool>(
+                                            context: ctx2,
+                                            builder: (dialogCtx) => AlertDialog(
+                                              title: const Text('Eliminar oferta'),
+                                              content: Text('Se eliminará "$title".'),
+                                              actions: [
+                                                TextButton(
+                                                  onPressed: () => Navigator.pop(dialogCtx, false),
+                                                  child: const Text('Cancelar'),
+                                                ),
+                                                ElevatedButton(
+                                                  onPressed: () => Navigator.pop(dialogCtx, true),
+                                                  child: const Text('Eliminar'),
+                                                ),
+                                              ],
+                                            ),
+                                          );
+                                          if (ok == true) {
+                                            await _offersApi.deleteOffer(id);
+                                            if (!ctx2.mounted) return;
+                                            (ctx2 as Element).markNeedsBuild();
+                                          }
+                                        },
+                                        icon: const Icon(Icons.delete_outline),
+                                        label: const Text('Eliminar'),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+
+  Future<void> _openCreateOffer(BuildContext context, Product product) async {
+    // Form controllers
+    final title = TextEditingController();
+    final details = TextEditingController();
+    final extraPrice = TextEditingController(text: '0');
+    final discountPercent = TextEditingController(text: '0');
+    final freeItem = TextEditingController();
+
+    String type = 'promo'; // promo|combo|offer
+    int? dayOfWeek; // null = siempre (1..7 = día)
+
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (dialogCtx) => StatefulBuilder(
+        builder: (dctx, setLocal) => AlertDialog(
+          title: const Text('Crear promo/oferta/combo'),
+          content: SizedBox(
+            width: 520,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  DropdownButtonFormField<String>(
+                    value: type,
+                    items: const [
+                      DropdownMenuItem(value: 'promo', child: Text('Promo (descuento)')),
+                      DropdownMenuItem(value: 'offer', child: Text('Oferta (extra / condición)')),
+                      DropdownMenuItem(value: 'combo', child: Text('Combo (incluye algo)')),
+                    ],
+                    onChanged: (v) => setLocal(() => type = v ?? 'promo'),
+                    decoration: const InputDecoration(labelText: 'Tipo'),
+                  ),
+                  const SizedBox(height: 10),
+
+                  DropdownButtonFormField<int?>(
+                    value: dayOfWeek,
+                    items: [
+                      const DropdownMenuItem(value: null, child: Text('Siempre (cualquier día)')),
+                      for (int i = 1; i <= 7; i++)
+                        DropdownMenuItem(value: i, child: Text(_weekdayName(i))),
+                    ],
+                    onChanged: (v) => setLocal(() => dayOfWeek = v),
+                    decoration: const InputDecoration(labelText: 'Día (opcional)'),
+                  ),
+                  const SizedBox(height: 10),
+
+                  TextField(
+                    controller: title,
+                    decoration: const InputDecoration(labelText: 'Título (ej: Lunes -15%)'),
+                  ),
+                  const SizedBox(height: 10),
+
+                  TextField(
+                    controller: details,
+                    maxLines: 2,
+                    decoration: const InputDecoration(labelText: 'Detalle (opcional)'),
+                  ),
+                  const SizedBox(height: 10),
+
+                  TextField(
+                    controller: discountPercent,
+                    keyboardType: TextInputType.number,
+                    decoration: const InputDecoration(
+                      labelText: 'Descuento % (0..100)',
+                      hintText: 'Ej: 15',
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+
+                  TextField(
+                    controller: extraPrice,
+                    keyboardType: TextInputType.number,
+                    decoration: const InputDecoration(
+                      labelText: 'Extra precio (opcional)',
+                      hintText: 'Ej: 1.50',
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+
+                  TextField(
+                    controller: freeItem,
+                    decoration: const InputDecoration(
+                      labelText: 'Regalo (opcional)',
+                      hintText: 'Ej: Helado gratis',
+                    ),
+                  ),
+
+                  const SizedBox(height: 10),
+                  const Text(
+                    'Notas:\n- El descuento se aplica al precio base.\n- El extra se suma después del descuento.\n- El regalo solo se muestra (no suma).',
+                  ),
+                ],
+              ),
+            ),
+          ),
+          actions: [
+            TextButton(onPressed: () => Navigator.pop(dialogCtx, false), child: const Text('Cancelar')),
+            ElevatedButton(onPressed: () => Navigator.pop(dialogCtx, true), child: const Text('Crear')),
+          ],
+        ),
+      ),
+    );
+
+    if (ok != true) return;
+
+    final t = title.text.trim();
+    if (t.isEmpty) {
+      if (!context.mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('El título es obligatorio.')));
+      return;
+    }
+
+    final disc = double.tryParse(discountPercent.text.trim()) ?? 0;
+    final extra = double.tryParse(extraPrice.text.trim()) ?? 0;
+    final gift = freeItem.text.trim().isEmpty ? null : freeItem.text.trim();
+    final det = details.text.trim().isEmpty ? null : details.text.trim();
+
+    await _offersApi.createOffer(
+      productId: product.id,
+      type: type,
+      title: t,
+      details: det,
+      extraPrice: extra,
+      discountPercent: disc,
+      dayOfWeek: dayOfWeek,
+      freeItem: gift,
+    );
+
+    if (!context.mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Oferta creada')));
+  }
+
+  // -------------------- UI LISTA PRODUCTOS --------------------
+
+  @override
+  Widget build(BuildContext context) {
+    final app = context.watch<AppState>();
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('Productos (Empleado)')),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () => _openForm(context),
+        icon: const Icon(Icons.add),
+        label: const Text('Nuevo'),
+      ),
+      body: app.loading
+          ? const Center(child: CircularProgressIndicator())
+          : app.error != null
+              ? Center(child: Text('Error: ${app.error}'))
+              : ListView.separated(
+                  padding: const EdgeInsets.all(12),
+                  itemCount: app.products.length,
+                  separatorBuilder: (_, __) => const SizedBox(height: 10),
+                  itemBuilder: (_, i) {
+                    final p = app.products[i];
+
+                    return Card(
+                      child: ListTile(
+                        contentPadding: const EdgeInsets.all(12),
+                        leading: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Container(
+                            width: 54,
+                            height: 54,
+                            color: Colors.black12,
+                            child: p.imageUrl == null
+                                ? const Icon(Icons.image_not_supported)
+                                : Image.network(p.imageUrl!, fit: BoxFit.cover),
+                          ),
+                        ),
+                        title: Text(p.name, style: const TextStyle(fontWeight: FontWeight.bold)),
+                        subtitle: Text('${p.category} • \$${p.price.toStringAsFixed(2)}'
+                            '${p.isAvailable ? '' : ' • NO DISPONIBLE'}'),
+                        trailing: Wrap(
+                          spacing: 6,
+                          children: [
+                            IconButton(
+                              tooltip: 'Promos',
+                              icon: const Icon(Icons.local_offer_outlined),
+                              onPressed: () => _openPromos(context, p),
+                            ),
+                            IconButton(
+                              tooltip: 'Editar',
+                              icon: const Icon(Icons.edit),
+                              onPressed: () => _openForm(context, product: p),
+                            ),
+                            IconButton(
+                              tooltip: 'Eliminar',
+                              icon: const Icon(Icons.delete_outline),
+                              onPressed: () async {
+                                final ok = await showDialog<bool>(
+                                  context: context,
+                                  builder: (dialogCtx) => AlertDialog(
+                                    title: const Text('Eliminar producto'),
+                                    content: Text('Se eliminará "${p.name}".'),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () => Navigator.pop(dialogCtx, false),
+                                        child: const Text('Cancelar'),
+                                      ),
+                                      ElevatedButton(
+                                        onPressed: () => Navigator.pop(dialogCtx, true),
+                                        child: const Text('Eliminar'),
+                                      ),
+                                    ],
+                                  ),
+                                );
+
+                                if (ok == true) {
+                                  await app.deleteProduct(p.id);
+                                }
+                              },
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                ),
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/order_status_screen.dart">
+import 'package:flutter/material.dart';
+import '../core/order_service.dart';
+
+class OrderStatusScreen extends StatefulWidget {
+  final String orderId;
+  const OrderStatusScreen({super.key, required this.orderId});
+
+  @override
+  State<OrderStatusScreen> createState() => _OrderStatusScreenState();
+}
+
+class _OrderStatusScreenState extends State<OrderStatusScreen> {
+  final service = OrderService();
+  Map<String, dynamic>? order;
+  List<Map<String, dynamic>> items = [];
+  dynamic channel;
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+    channel = service.subscribeOrder(widget.orderId, (newRow) {
+      setState(() => order = newRow);
+    });
+  }
+
+  Future<void> _load() async {
+    final my = await service.getMyOrders();
+    order = my.firstWhere((o) => o['id'].toString() == widget.orderId, orElse: () => {});
+    items = await service.getOrderItems(widget.orderId);
+    setState(() {});
+  }
+
+  @override
+  void dispose() {
+    if (channel != null) {
+      // ignore: avoid_dynamic_calls
+      channel.unsubscribe();
+    }
+    super.dispose();
+  }
+
+  String statusText(String? s) {
+    switch (s) {
+      case 'pending':
+        return 'Pedido recibido';
+      case 'preparing':
+        return 'Preparando';
+      case 'on_the_way':
+        return 'En camino';
+      case 'delivered':
+        return 'Entregado';
+      case 'cancelled':
+        return 'Cancelado';
+      default:
+        return 'Desconocido';
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final o = order;
+    if (o == null) return const Scaffold(body: Center(child: CircularProgressIndicator()));
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('Pedido en camino')),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: ListView(
+          children: [
+            Text('Código: ${widget.orderId}', style: const TextStyle(fontWeight: FontWeight.bold)),
+            const SizedBox(height: 8),
+            Text('Estado: ${statusText(o['status']?.toString())}', style: const TextStyle(fontSize: 16)),
+            const Divider(height: 24),
+
+            Text('Cliente: ${o['customer_name'] ?? ''}'),
+            Text('Dirección: ${o['customer_address'] ?? ''}'),
+            Text('Teléfono: ${o['customer_phone'] ?? ''}'),
+            Text('Correo: ${o['customer_email'] ?? ''}'),
+
+            const Divider(height: 24),
+            const Text('Detalle del pedido', style: TextStyle(fontWeight: FontWeight.bold)),
+            const SizedBox(height: 8),
+            ...items.map((it) => ListTile(
+                  title: Text('${it['product_name']} x${it['quantity']}'),
+                  subtitle: Text('Oferta: ${it['selected_offer_title'] ?? 'Ninguna'}'),
+                  trailing: Text('\$${(it['unit_price'] as num).toDouble().toStringAsFixed(2)}'),
+                )),
+          ],
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/order_tracking_screen.dart">
+import 'package:flutter/material.dart';
+import '../core/order_service.dart';
+import 'order_status_screen.dart';
+
+class OrderTrackingScreen extends StatefulWidget {
+  const OrderTrackingScreen({super.key});
+
+  @override
+  State<OrderTrackingScreen> createState() => _OrderTrackingScreenState();
+}
+
+class _OrderTrackingScreenState extends State<OrderTrackingScreen> {
+  final service = OrderService();
+  bool loading = true;
+  List<Map<String, dynamic>> orders = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  Future<void> _load() async {
+    final data = await service.getMyOrders();
+    setState(() {
+      orders = data;
+      loading = false;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Mis pedidos')),
+      body: loading
+          ? const Center(child: CircularProgressIndicator())
+          : ListView.builder(
+              itemCount: orders.length,
+              itemBuilder: (_, i) {
+                final o = orders[i];
+                return ListTile(
+                  title: Text('Pedido ${o['id']}'),
+                  subtitle: Text('Estado: ${o['status']}'),
+                  trailing: Text('\$${(o['total'] as num).toDouble().toStringAsFixed(2)}'),
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => OrderStatusScreen(orderId: o['id'].toString())),
+                  ),
+                );
+              },
+            ),
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/product_detail_screen.dart">
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../models/product.dart';
+import '../state/app_state.dart';
+import '../core/offer_service.dart';
+
+class ProductDetailScreen extends StatefulWidget {
+  final Product product;
+  const ProductDetailScreen({super.key, required this.product});
+
+  @override
+  State<ProductDetailScreen> createState() => _ProductDetailScreenState();
+}
+
+class _ProductDetailScreenState extends State<ProductDetailScreen> {
+  int qty = 1;
+
+  String? selectedOfferTitle;
+  double selectedOfferExtra = 0;
+  double selectedDiscountPercent = 0;
+  String? selectedFreeItem;
+
+  List<Map<String, dynamic>> offers = [];
+  bool loadingOffers = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadOffers();
+  }
+
+  Future<void> _loadOffers() async {
+    try {
+      final today = DateTime.now().weekday; // 1..7
+      final data = await OfferService().getOffersForProduct(widget.product.id, dayOfWeek: today);
+      setState(() {
+        offers = data;
+        loadingOffers = false;
+      });
+    } catch (_) {
+      setState(() => loadingOffers = false);
+    }
+  }
+
+  double _toDouble(dynamic v) {
+    if (v is num) return v.toDouble();
+    return double.tryParse(v?.toString() ?? '') ?? 0;
+  }
+
+  int? _toInt(dynamic v) {
+    if (v == null) return null;
+    if (v is int) return v;
+    return int.tryParse(v.toString());
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final p = widget.product;
+
+    final baseDiscounted = p.price * (1 - (selectedDiscountPercent.clamp(0, 100) / 100));
+    final finalUnit = baseDiscounted + selectedOfferExtra;
+
+    return Scaffold(
+      appBar: AppBar(title: Text(p.name)),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: ListView(
+          children: [
+            Container(
+              height: 220,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                color: Colors.black12,
+                image: p.imageUrl == null
+                    ? null
+                    : DecorationImage(image: NetworkImage(p.imageUrl!), fit: BoxFit.cover),
+              ),
+              child: p.imageUrl == null ? const Center(child: Icon(Icons.image, size: 48)) : null,
+            ),
+            const SizedBox(height: 12),
+            Text(p.description),
+            const SizedBox(height: 8),
+
+            Text(
+              'Precio: \$${p.price.toStringAsFixed(2)}',
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+            ),
+
+            if (selectedDiscountPercent > 0)
+              Text(
+                'Con descuento: \$${baseDiscounted.toStringAsFixed(2)} (-${selectedDiscountPercent.toStringAsFixed(0)}%)',
+                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              ),
+
+            if (selectedOfferExtra != 0)
+              Text(
+                'Extra oferta: +\$${selectedOfferExtra.toStringAsFixed(2)}',
+                style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+              ),
+
+            if (selectedFreeItem != null && selectedFreeItem!.trim().isNotEmpty)
+              Text(
+                'Incluye: ${selectedFreeItem!}',
+                style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+              ),
+
+            const SizedBox(height: 16),
+            const Text('Promos / Combos disponibles', style: TextStyle(fontWeight: FontWeight.bold)),
+            const SizedBox(height: 8),
+
+            if (loadingOffers) const LinearProgressIndicator(),
+            if (!loadingOffers && offers.isEmpty) const Text('No hay ofertas para este producto hoy.'),
+
+            ...offers.map((o) {
+              final title = o['title'].toString();
+              final extra = _toDouble(o['extra_price']);
+              final details = (o['details'] ?? '').toString();
+              final discount = _toDouble(o['discount_percent']);
+              final day = _toInt(o['day_of_week']);
+              final freeItem = (o['free_item'] ?? '').toString().trim();
+
+              final selected = selectedOfferTitle == title;
+
+              String subtitle = details;
+              if (day != null) subtitle = '[Solo hoy] ${subtitle.isEmpty ? '' : subtitle}';
+              if (discount > 0) subtitle = '${subtitle.isEmpty ? '' : '$subtitle\n'}Descuento: -${discount.toStringAsFixed(0)}%';
+              if (freeItem.isNotEmpty) subtitle = '${subtitle.isEmpty ? '' : '$subtitle\n'}Regalo: $freeItem';
+
+              final label = '$title'
+                  '${discount > 0 ? ' (-${discount.toStringAsFixed(0)}%)' : ''}'
+                  '${extra != 0 ? ' (+\$${extra.toStringAsFixed(2)})' : ''}';
+
+              return RadioListTile<String>(
+                title: Text(label),
+                subtitle: subtitle.isEmpty ? null : Text(subtitle),
+                value: title,
+                groupValue: selectedOfferTitle,
+                onChanged: (v) {
+                  setState(() {
+                    selectedOfferTitle = v;
+                    selectedOfferExtra = extra;
+                    selectedDiscountPercent = discount;
+                    selectedFreeItem = freeItem.isEmpty ? null : freeItem;
+                  });
+                },
+              );
+            }),
+
+            const Divider(height: 24),
+
+            Row(
+              children: [
+                IconButton(
+                  onPressed: () => setState(() => qty = (qty - 1).clamp(1, 99)),
+                  icon: const Icon(Icons.remove),
+                ),
+                Text('$qty', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                IconButton(
+                  onPressed: () => setState(() => qty = (qty + 1).clamp(1, 99)),
+                  icon: const Icon(Icons.add),
+                ),
+                const Spacer(),
+                ElevatedButton.icon(
+                  onPressed: () {
+                    context.read<AppState>().addToCart(
+                          p,
+                          qty: qty,
+                          offerTitle: selectedOfferTitle,
+                          offerExtra: selectedOfferExtra,
+                          discountPercent: selectedDiscountPercent,
+                          freeItem: selectedFreeItem,
+                        );
+
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('Agregado: \$${finalUnit.toStringAsFixed(2)} x$qty'),
+                      ),
+                    );
+                  },
+                  icon: const Icon(Icons.shopping_cart),
+                  label: const Text('Agregar'),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/user_home_screen.dart">
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+import '../auth/auth_service.dart';
+import '../state/app_state.dart';
+import 'cart_screen.dart';
+import 'order_tracking_screen.dart';
+import 'product_detail_screen.dart';
+
+class UserHomeScreen extends StatelessWidget {
+  const UserHomeScreen({super.key});
+
+  Future<void> _logout(BuildContext context) async {
+    await AuthService().logout();
+    if (!context.mounted) return;
+
+    // Limpiar stack; main.dart mostrará LoginScreen
+    Navigator.of(context).popUntil((route) => route.isFirst);
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Sesión cerrada')),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final app = context.watch<AppState>();
+    final userEmail = Supabase.instance.client.auth.currentUser?.email ?? '';
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Inicio'),
+        actions: [
+          IconButton(
+            tooltip: 'Mis pedidos',
+            icon: const Icon(Icons.local_shipping_outlined),
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const OrderTrackingScreen()),
+            ),
+          ),
+          IconButton(
+            tooltip: 'Cerrar sesión',
+            icon: const Icon(Icons.logout),
+            onPressed: () => _logout(context),
+          ),
+        ],
+      ),
+      body: app.loading
+          ? const Center(child: CircularProgressIndicator())
+          : app.error != null
+              ? Center(child: Text('Error: ${app.error}'))
+              : Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Sesión: $userEmail'),
+                          const SizedBox(height: 10),
+                          TextField(
+                            decoration: const InputDecoration(
+                              prefixIcon: Icon(Icons.search),
+                              hintText: 'Buscar productos...',
+                            ),
+                            onChanged: app.setSearch,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 48,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        padding: const EdgeInsets.symmetric(horizontal: 12),
+                        children: app.categories.map((c) {
+                          final selected = app.selectedCategory == c;
+                          return Padding(
+                            padding: const EdgeInsets.only(right: 8),
+                            child: ChoiceChip(
+                              label: Text(c),
+                              selected: selected,
+                              onSelected: (_) => app.setCategory(c),
+                            ),
+                          );
+                        }).toList(),
+                      ),
+                    ),
+                    Expanded(
+                      child: app.filteredProducts.isEmpty
+                          ? const Center(child: Text('No hay productos para mostrar.'))
+                          : GridView.builder(
+                              padding: const EdgeInsets.all(12),
+                              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2,
+                                childAspectRatio: 0.78,
+                                crossAxisSpacing: 10,
+                                mainAxisSpacing: 10,
+                              ),
+                              itemCount: app.filteredProducts.length,
+                              itemBuilder: (_, i) {
+                                final p = app.filteredProducts[i];
+                                return InkWell(
+                                  onTap: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (_) => ProductDetailScreen(product: p),
+                                    ),
+                                  ),
+                                  child: Card(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(10),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Expanded(
+                                            child: Container(
+                                              width: double.infinity,
+                                              decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.circular(12),
+                                                color: Colors.black12,
+                                                image: p.imageUrl == null
+                                                    ? null
+                                                    : DecorationImage(
+                                                        image: NetworkImage(p.imageUrl!),
+                                                        fit: BoxFit.cover,
+                                                      ),
+                                              ),
+                                              child: p.imageUrl == null
+                                                  ? const Center(child: Icon(Icons.image, size: 40))
+                                                  : null,
+                                            ),
+                                          ),
+                                          const SizedBox(height: 8),
+                                          Text(p.name, style: const TextStyle(fontWeight: FontWeight.bold)),
+                                          Text('\$${p.price.toStringAsFixed(2)}'),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                    ),
+                  ],
+                ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => const CartScreen()),
+        ),
+        icon: const Icon(Icons.shopping_cart),
+        label: Text('Carrito (${app.cart.length})'),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/widgets/quantity_stepper.dart">
+import 'package:flutter/material.dart';
+
+class QuantityStepper extends StatelessWidget {
+  final int value;
+  final ValueChanged<int> onChanged;
+  const QuantityStepper({super.key, required this.value, required this.onChanged});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        IconButton(
+          onPressed: () => onChanged((value - 1).clamp(1, 99)),
+          icon: const Icon(Icons.remove_circle_outline),
+        ),
+        Text('$value', style: const TextStyle(fontWeight: FontWeight.bold)),
+        IconButton(
+          onPressed: () => onChanged((value + 1).clamp(1, 99)),
+          icon: const Icon(Icons.add_circle_outline),
+        ),
+      ],
+    );
+  }
+}
+</file>
+
+<file path="android/app/src/main/AndroidManifest.xml">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:label="fast_food_app"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="fastfoodapp" android:host="auth-callback"/>
+            </intent-filter>
+
+        </activity>
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+    <!-- Required to query activities that can process text, see:
+         https://developer.android.com/training/package-visibility and
+         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+
+         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+    </queries>
+</manifest>
+</file>
+
+<file path="android/settings.gradle">
+pluginManagement {
+    def flutterSdkPath = {
+        def properties = new Properties()
+        file("local.properties").withInputStream { properties.load(it) }
+        def flutterSdkPath = properties.getProperty("flutter.sdk")
+        assert flutterSdkPath != null, "flutter.sdk not set in local.properties"
+        return flutterSdkPath
+    }()
+
+    includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")
+
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    id "dev.flutter.flutter-plugin-loader" version "1.0.0"
+    id "com.android.application" version "8.2.2" apply false
+    id "org.jetbrains.kotlin.android" version "1.9.22" apply false
+}
+
+include ":app"
+</file>
+
+<file path="lib/main.dart">
+import 'dart:async';
+
+import 'package:app_links/app_links.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:provider/provider.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+import 'core/supabase_config.dart';
+import 'core/theme.dart';
+import 'core/role_service.dart';
+import 'state/app_state.dart';
+
+import 'auth/login_screen.dart';
+import 'auth/change_password_screen.dart';
+
+import 'ui/user_home_screen.dart';
+import 'ui/employee_home_screen.dart';
+
+final GlobalKey<NavigatorState> navKey = GlobalKey<NavigatorState>();
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await dotenv.load(fileName: ".env");
+  await SupabaseConfig.init();
+
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => AppState()..loadProducts(),
+      child: const FastFoodApp(),
+    ),
+  );
+}
+
+class FastFoodApp extends StatefulWidget {
+  const FastFoodApp({super.key});
+
+  @override
+  State<FastFoodApp> createState() => _FastFoodAppState();
+}
+
+class _FastFoodAppState extends State<FastFoodApp> {
+  final _appLinks = AppLinks();
+  StreamSubscription<Uri>? _linkSub;
+
+  Uri? _lastHandled;
+  DateTime? _lastHandledAt;
+
+  @override
+  void initState() {
+    super.initState();
+    _setupDeepLinks();
+  }
+
+  Future<void> _setupDeepLinks() async {
+    // Link inicial
+    try {
+      final initial = await _appLinks.getInitialLink();
+      if (initial != null) _handleUri(initial);
+    } catch (_) {}
+
+    // Links mientras corre
+    _linkSub = _appLinks.uriLinkStream.listen((uri) {
+      _handleUri(uri);
+    }, onError: (_) {});
+  }
+
+  void _handleUri(Uri uri) {
+    // Evitar doble disparo (getInitialLink + stream)
+    final now = DateTime.now();
+    if (_lastHandled == uri &&
+        _lastHandledAt != null &&
+        now.difference(_lastHandledAt!).inSeconds < 2) {
+      return;
+    }
+    _lastHandled = uri;
+    _lastHandledAt = now;
+
+    // Ej: fastfoodapp://auth-callback?type=recovery
+    if (uri.scheme == 'fastfoodapp' && uri.host == 'auth-callback') {
+      final type = (uri.queryParameters['type'] ?? '').toLowerCase();
+
+      // Para recovery/reset, abrir pantalla de cambiar contraseña dentro de la app
+      if (type.isEmpty || type == 'recovery' || type == 'reset') {
+        navKey.currentState?.push(
+          MaterialPageRoute(builder: (_) => const ChangePasswordScreen()),
+        );
+      }
+    }
+  }
+
+  @override
+  void dispose() {
+    _linkSub?.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // IMPORTANTÍSIMO:
+    // La navegación (login/logout) NO debe hacer push a FastFoodApp.
+    // Este StreamBuilder cambia de pantalla automáticamente según el estado de Auth.
+    return StreamBuilder<AuthState>(
+      stream: Supabase.instance.client.auth.onAuthStateChange,
+      builder: (context, snap) {
+        final session = Supabase.instance.client.auth.currentSession;
+
+        return MaterialApp(
+          navigatorKey: navKey,
+          debugShowCheckedModeBanner: false,
+          theme: buildTheme(),
+          localizationsDelegates: const [
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: const [Locale('es')],
+          home: session == null ? const LoginScreen() : const _RoleRouter(),
+        );
+      },
+    );
+  }
+}
+
+class _RoleRouter extends StatefulWidget {
+  const _RoleRouter();
+
+  @override
+  State<_RoleRouter> createState() => _RoleRouterState();
+}
+
+class _RoleRouterState extends State<_RoleRouter> {
+  String? role;
+  String? err;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadRole();
+  }
+
+  Future<void> _loadRole() async {
+    try {
+      final r = await RoleService().getMyRole();
+      if (!mounted) return;
+      setState(() => role = r);
+    } catch (e) {
+      if (!mounted) return;
+      setState(() => err = e.toString());
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (err != null) {
+      return Scaffold(body: Center(child: Text('Error rol: $err')));
+    }
+    if (role == null) {
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
+    }
+    return role == 'employee'
+        ? const EmployeeHomeScreen()
+        : const UserHomeScreen();
+  }
+}
+</file>
+
+<file path="lib/widgets/food_card.dart">
+import "package:flutter/material.dart";
+
+class FoodCard extends StatelessWidget {
+  final String title;
+  final String price;
+  final Color color;
+
+  const FoodCard({
+    super.key,
+    required this.title,
+    required this.price,
+    required this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    
+    // WIDGET 7: Container (Caja decorada)
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(15),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withValues(alpha: 0.3),
+            blurRadius: 5,
+            offset: const Offset(0, 3),
+          )
+        ],
+      ),
+
+      // WIDGET 4: Column (Organizar elementos verticalmente: Imagen, Titulo, Precio)
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // WIDGET 6: Expanded (Para que la imagen ocupe el espacio disponible arriba)
+          Expanded(
+            // WIDGET 5: Stack (Para poner elementos uno encima de otro)
+            child: Stack(
+              children: [
+
+                Container(
+                  decoration: BoxDecoration(
+                    color: color,
+                    borderRadius: const BorderRadius.vertical(top: Radius.circular(15))
+                  ),
+                ),
+                // WIDGET 8: Align (Alinear el corazón en la esquina)
+                const Align(
+                  alignment: Alignment.topRight,
+                  // WIDGET 9: Padding (Espacio interno)
+                  child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      child: Icon(Icons.favorite_border, size: 18, color: Colors.red),
+                    )
+                  ),
+                )
+              ],
+            )
+          ),
+
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+
+                // WIDGET 10: SizedBox (Espacio vertical fijo)
+                const SizedBox(height: 5),
+                Text(
+                  price,
+                  style: const TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
+          )
+          
+        ],
+      ),
+    );
+  }
+}
+</file>
+
+<file path="pubspec.lock">
+# Generated by pub
+# See https://dart.dev/tools/pub/glossary#lockfile
+packages:
+  adaptive_number:
+    dependency: transitive
+    description:
+      name: adaptive_number
+      sha256: "3a567544e9b5c9c803006f51140ad544aedc79604fd4f3f2c1380003f97c1d77"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
+  app_links:
+    dependency: transitive
+    description:
+      name: app_links
+      sha256: "5f88447519add627fe1cbcab4fd1da3d4fed15b9baf29f28b22535c95ecee3e8"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.4.1"
+  app_links_linux:
+    dependency: transitive
+    description:
+      name: app_links_linux
+      sha256: f5f7173a78609f3dfd4c2ff2c95bd559ab43c80a87dc6a095921d96c05688c81
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.3"
+  app_links_platform_interface:
+    dependency: transitive
+    description:
+      name: app_links_platform_interface
+      sha256: "05f5379577c513b534a29ddea68176a4d4802c46180ee8e2e966257158772a3f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.2"
+  app_links_web:
+    dependency: transitive
+    description:
+      name: app_links_web
+      sha256: af060ed76183f9e2b87510a9480e56a5352b6c249778d07bd2c95fc35632a555
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.4"
+  async:
+    dependency: transitive
+    description:
+      name: async
+      sha256: "947bfcf187f74dbc5e146c9eb9c0f10c9f8b30743e341481c1e2ed3ecc18c20c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.11.0"
+  boolean_selector:
+    dependency: transitive
+    description:
+      name: boolean_selector
+      sha256: "6cfb5af12253eaf2b368f07bacc5a80d1301a071c73360d746b7f2e32d762c66"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.1"
+  characters:
+    dependency: transitive
+    description:
+      name: characters
+      sha256: "04a925763edad70e8443c99234dc3328f442e811f1d8fd1a72f1c8ad0f69a605"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.3.0"
+  clock:
+    dependency: transitive
+    description:
+      name: clock
+      sha256: cb6d7f03e1de671e34607e909a7213e31d7752be4fb66a86d29fe1eb14bfb5cf
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
+  collection:
+    dependency: transitive
+    description:
+      name: collection
+      sha256: a1ace0a119f20aabc852d165077c036cd864315bd99b7eaa10a60100341941bf
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.19.0"
+  convert:
+    dependency: transitive
+    description:
+      name: convert
+      sha256: b30acd5944035672bc15c6b7a8b47d773e41e2f17de064350988c5d02adb1c68
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.2"
+  cross_file:
+    dependency: transitive
+    description:
+      name: cross_file
+      sha256: "7caf6a750a0c04effbb52a676dce9a4a592e10ad35c34d6d2d0e4811160d5670"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.4+2"
+  crypto:
+    dependency: transitive
+    description:
+      name: crypto
+      sha256: c8ea0233063ba03258fbcf2ca4d6dadfefe14f02fab57702265467a19f27fadf
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.7"
+  cupertino_icons:
+    dependency: "direct main"
+    description:
+      name: cupertino_icons
+      sha256: ba631d1c7f7bef6b729a622b7b752645a2d076dba9976925b8f25725a30e1ee6
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.8"
+  dart_jsonwebtoken:
+    dependency: transitive
+    description:
+      name: dart_jsonwebtoken
+      sha256: "00a0812d2aeaeb0d30bcbc4dd3cee57971dbc0ab2216adf4f0247f37793f15ef"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.17.0"
+  ed25519_edwards:
+    dependency: transitive
+    description:
+      name: ed25519_edwards
+      sha256: "6ce0112d131327ec6d42beede1e5dfd526069b18ad45dcf654f15074ad9276cd"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.1"
+  fake_async:
+    dependency: transitive
+    description:
+      name: fake_async
+      sha256: "511392330127add0b769b75a987850d136345d9227c6b94c96a04cf4a391bf78"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.3.1"
+  ffi:
+    dependency: transitive
+    description:
+      name: ffi
+      sha256: "16ed7b077ef01ad6170a3d0c57caa4a112a38d7a2ed5602e0aca9ca6f3d98da6"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.3"
+  file:
+    dependency: transitive
+    description:
+      name: file
+      sha256: a3b4f84adafef897088c160faf7dfffb7696046cb13ae90b508c2cbc95d3b8d4
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.0.1"
+  file_selector_linux:
+    dependency: transitive
+    description:
+      name: file_selector_linux
+      sha256: "54cbbd957e1156d29548c7d9b9ec0c0ebb6de0a90452198683a7d23aed617a33"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.9.3+2"
+  file_selector_macos:
+    dependency: transitive
+    description:
+      name: file_selector_macos
+      sha256: "8c9250b2bd2d8d4268e39c82543bacbaca0fda7d29e0728c3c4bbb7c820fd711"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.9.4+3"
+  file_selector_platform_interface:
+    dependency: transitive
+    description:
+      name: file_selector_platform_interface
+      sha256: a3994c26f10378a039faa11de174d7b78eb8f79e4dd0af2a451410c1a5c3f66b
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.6.2"
+  file_selector_windows:
+    dependency: transitive
+    description:
+      name: file_selector_windows
+      sha256: "320fcfb6f33caa90f0b58380489fc5ac05d99ee94b61aa96ec2bff0ba81d3c2b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.9.3+4"
+  fixnum:
+    dependency: transitive
+    description:
+      name: fixnum
+      sha256: b6dc7065e46c974bc7c5f143080a6764ec7a4be6da1285ececdc37be96de53be
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
+  flutter:
+    dependency: "direct main"
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  flutter_dotenv:
+    dependency: "direct main"
+    description:
+      name: flutter_dotenv
+      sha256: b7c7be5cd9f6ef7a78429cabd2774d3c4af50e79cb2b7593e3d5d763ef95c61b
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.2.1"
+  flutter_lints:
+    dependency: "direct dev"
+    description:
+      name: flutter_lints
+      sha256: "5398f14efa795ffb7a33e9b6a08798b26a180edac4ad7db3f231e40f82ce11e1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.0.0"
+  flutter_localizations:
+    dependency: "direct main"
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  flutter_plugin_android_lifecycle:
+    dependency: transitive
+    description:
+      name: flutter_plugin_android_lifecycle
+      sha256: "6382ce712ff69b0f719640ce957559dde459e55ecd433c767e06d139ddf16cab"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.29"
+  flutter_test:
+    dependency: "direct dev"
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  functions_client:
+    dependency: transitive
+    description:
+      name: functions_client
+      sha256: "94074d62167ae634127ef6095f536835063a7dc80f2b1aa306d2346ff9023996"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.5.0"
+  gotrue:
+    dependency: transitive
+    description:
+      name: gotrue
+      sha256: f7b52008311941a7c3e99f9590c4ee32dfc102a5442e43abf1b287d9f8cc39b2
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.18.0"
+  gtk:
+    dependency: transitive
+    description:
+      name: gtk
+      sha256: e8ce9ca4b1df106e4d72dad201d345ea1a036cc12c360f1a7d5a758f78ffa42c
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.0"
+  http:
+    dependency: "direct main"
+    description:
+      name: http
+      sha256: "87721a4a50b19c7f1d49001e51409bddc46303966ce89a65af4f4e6004896412"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.6.0"
+  http_parser:
+    dependency: transitive
+    description:
+      name: http_parser
+      sha256: "178d74305e7866013777bab2c3d8726205dc5a4dd935297175b19a23a2e66571"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.2"
+  image_picker:
+    dependency: "direct main"
+    description:
+      name: image_picker
+      sha256: "736eb56a911cf24d1859315ad09ddec0b66104bc41a7f8c5b96b4e2620cf5041"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0"
+  image_picker_android:
+    dependency: transitive
+    description:
+      name: image_picker_android
+      sha256: e83b2b05141469c5e19d77e1dfa11096b6b1567d09065b2265d7c6904560050c
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.8.13"
+  image_picker_for_web:
+    dependency: transitive
+    description:
+      name: image_picker_for_web
+      sha256: "40c2a6a0da15556dc0f8e38a3246064a971a9f512386c3339b89f76db87269b6"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.0"
+  image_picker_ios:
+    dependency: transitive
+    description:
+      name: image_picker_ios
+      sha256: eb06fe30bab4c4497bad449b66448f50edcc695f1c59408e78aa3a8059eb8f0e
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.8.13"
+  image_picker_linux:
+    dependency: transitive
+    description:
+      name: image_picker_linux
+      sha256: "1f81c5f2046b9ab724f85523e4af65be1d47b038160a8c8deed909762c308ed4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.2"
+  image_picker_macos:
+    dependency: transitive
+    description:
+      name: image_picker_macos
+      sha256: d58cd9d67793d52beefd6585b12050af0a7663c0c2a6ece0fb110a35d6955e04
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.2"
+  image_picker_platform_interface:
+    dependency: transitive
+    description:
+      name: image_picker_platform_interface
+      sha256: "9f143b0dba3e459553209e20cc425c9801af48e6dfa4f01a0fcf927be3f41665"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.11.0"
+  image_picker_windows:
+    dependency: transitive
+    description:
+      name: image_picker_windows
+      sha256: d248c86554a72b5495a31c56f060cf73a41c7ff541689327b1a7dbccc33adfae
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.2"
+  intl:
+    dependency: transitive
+    description:
+      name: intl
+      sha256: d6f56758b7d3014a48af9701c085700aac781a92a87a62b1333b46d8879661cf
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.19.0"
+  js:
+    dependency: transitive
+    description:
+      name: js
+      sha256: c1b2e9b5ea78c45e1a0788d29606ba27dc5f71f019f32ca5140f61ef071838cf
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.7.1"
+  jwt_decode:
+    dependency: transitive
+    description:
+      name: jwt_decode
+      sha256: d2e9f68c052b2225130977429d30f187aa1981d789c76ad104a32243cfdebfbb
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.1"
+  leak_tracker:
+    dependency: transitive
+    description:
+      name: leak_tracker
+      sha256: "7bb2830ebd849694d1ec25bf1f44582d6ac531a57a365a803a6034ff751d2d06"
+      url: "https://pub.dev"
+    source: hosted
+    version: "10.0.7"
+  leak_tracker_flutter_testing:
+    dependency: transitive
+    description:
+      name: leak_tracker_flutter_testing
+      sha256: "9491a714cca3667b60b5c420da8217e6de0d1ba7a5ec322fab01758f6998f379"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.8"
+  leak_tracker_testing:
+    dependency: transitive
+    description:
+      name: leak_tracker_testing
+      sha256: "6ba465d5d76e67ddf503e1161d1f4a6bc42306f9d66ca1e8f079a47290fb06d3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.1"
+  lints:
+    dependency: transitive
+    description:
+      name: lints
+      sha256: c35bb79562d980e9a453fc715854e1ed39e24e7d0297a880ef54e17f9874a9d7
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.1.1"
+  logging:
+    dependency: transitive
+    description:
+      name: logging
+      sha256: c8245ada5f1717ed44271ed1c26b8ce85ca3228fd2ffdb75468ab01979309d61
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.3.0"
+  matcher:
+    dependency: transitive
+    description:
+      name: matcher
+      sha256: d2323aa2060500f906aa31a895b4030b6da3ebdcc5619d14ce1aada65cd161cb
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.12.16+1"
+  material_color_utilities:
+    dependency: transitive
+    description:
+      name: material_color_utilities
+      sha256: f7142bb1154231d7ea5f96bc7bde4bda2a0945d2806bb11670e30b850d56bdec
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.11.1"
+  meta:
+    dependency: transitive
+    description:
+      name: meta
+      sha256: bdb68674043280c3428e9ec998512fb681678676b3c54e773629ffe74419f8c7
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.15.0"
+  mime:
+    dependency: transitive
+    description:
+      name: mime
+      sha256: "41a20518f0cb1256669420fdba0cd90d21561e560ac240f26ef8322e45bb7ed6"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
+  nested:
+    dependency: transitive
+    description:
+      name: nested
+      sha256: "03bac4c528c64c95c722ec99280375a6f2fc708eec17c7b3f07253b626cd2a20"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
+  path:
+    dependency: transitive
+    description:
+      name: path
+      sha256: "087ce49c3f0dc39180befefc60fdb4acd8f8620e5682fe2476afd0b3688bb4af"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.9.0"
+  path_provider:
+    dependency: transitive
+    description:
+      name: path_provider
+      sha256: "50c5dd5b6e1aaf6fb3a78b33f6aa3afca52bf903a8a5298f53101fdaee55bbcd"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.5"
+  path_provider_android:
+    dependency: transitive
+    description:
+      name: path_provider_android
+      sha256: d0d310befe2c8ab9e7f393288ccbb11b60c019c6b5afc21973eeee4dda2b35e9
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.17"
+  path_provider_foundation:
+    dependency: transitive
+    description:
+      name: path_provider_foundation
+      sha256: "4843174df4d288f5e29185bd6e72a6fbdf5a4a4602717eed565497429f179942"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.1"
+  path_provider_linux:
+    dependency: transitive
+    description:
+      name: path_provider_linux
+      sha256: f7a1fe3a634fe7734c8d3f2766ad746ae2a2884abe22e241a8b301bf5cac3279
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.1"
+  path_provider_platform_interface:
+    dependency: transitive
+    description:
+      name: path_provider_platform_interface
+      sha256: "88f5779f72ba699763fa3a3b06aa4bf6de76c8e5de842cf6f29e2e06476c2334"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.2"
+  path_provider_windows:
+    dependency: transitive
+    description:
+      name: path_provider_windows
+      sha256: bd6f00dbd873bfb70d0761682da2b3a2c2fccc2b9e84c495821639601d81afe7
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.0"
+  platform:
+    dependency: transitive
+    description:
+      name: platform
+      sha256: "5d6b1b0036a5f331ebc77c850ebc8506cbc1e9416c27e59b439f917a902a4984"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.6"
+  plugin_platform_interface:
+    dependency: transitive
+    description:
+      name: plugin_platform_interface
+      sha256: "4820fbfdb9478b1ebae27888254d445073732dae3d6ea81f0b7e06d5dedc3f02"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.8"
+  pointycastle:
+    dependency: transitive
+    description:
+      name: pointycastle
+      sha256: "4be0097fcf3fd3e8449e53730c631200ebc7b88016acecab2b0da2f0149222fe"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.9.1"
+  postgrest:
+    dependency: transitive
+    description:
+      name: postgrest
+      sha256: f4b6bb24b465c47649243ef0140475de8a0ec311dc9c75ebe573b2dcabb10460
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.6.0"
+  provider:
+    dependency: "direct main"
+    description:
+      name: provider
+      sha256: "4e82183fa20e5ca25703ead7e05de9e4cceed1fbd1eadc1ac3cb6f565a09f272"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.1.5+1"
+  realtime_client:
+    dependency: transitive
+    description:
+      name: realtime_client
+      sha256: "5268afc208d02fb9109854d262c1ebf6ece224cd285199ae1d2f92d2ff49dbf1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.7.0"
+  retry:
+    dependency: transitive
+    description:
+      name: retry
+      sha256: "822e118d5b3aafed083109c72d5f484c6dc66707885e07c0fbcb8b986bba7efc"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.2"
+  rxdart:
+    dependency: transitive
+    description:
+      name: rxdart
+      sha256: "5c3004a4a8dbb94bd4bf5412a4def4acdaa12e12f269737a5751369e12d1a962"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.28.0"
+  shared_preferences:
+    dependency: transitive
+    description:
+      name: shared_preferences
+      sha256: "6e8bf70b7fef813df4e9a36f658ac46d107db4b4cfe1048b477d4e453a8159f5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.5.3"
+  shared_preferences_android:
+    dependency: transitive
+    description:
+      name: shared_preferences_android
+      sha256: "5bcf0772a761b04f8c6bf814721713de6f3e5d9d89caf8d3fe031b02a342379e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.11"
+  shared_preferences_foundation:
+    dependency: transitive
+    description:
+      name: shared_preferences_foundation
+      sha256: "6a52cfcdaeac77cad8c97b539ff688ccfc458c007b4db12be584fbe5c0e49e03"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.5.4"
+  shared_preferences_linux:
+    dependency: transitive
+    description:
+      name: shared_preferences_linux
+      sha256: "580abfd40f415611503cae30adf626e6656dfb2f0cee8f465ece7b6defb40f2f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.1"
+  shared_preferences_platform_interface:
+    dependency: transitive
+    description:
+      name: shared_preferences_platform_interface
+      sha256: "57cbf196c486bc2cf1f02b85784932c6094376284b3ad5779d1b1c6c6a816b80"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.1"
+  shared_preferences_web:
+    dependency: transitive
+    description:
+      name: shared_preferences_web
+      sha256: c49bd060261c9a3f0ff445892695d6212ff603ef3115edbb448509d407600019
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.3"
+  shared_preferences_windows:
+    dependency: transitive
+    description:
+      name: shared_preferences_windows
+      sha256: "94ef0f72b2d71bc3e700e025db3710911bd51a71cefb65cc609dd0d9a982e3c1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.1"
+  sky_engine:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  source_span:
+    dependency: transitive
+    description:
+      name: source_span
+      sha256: "53e943d4206a5e30df338fd4c6e7a077e02254531b138a15aec3bd143c1a8b3c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.10.0"
+  stack_trace:
+    dependency: transitive
+    description:
+      name: stack_trace
+      sha256: "9f47fd3630d76be3ab26f0ee06d213679aa425996925ff3feffdec504931c377"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.12.0"
+  storage_client:
+    dependency: transitive
+    description:
+      name: storage_client
+      sha256: "1c61b19ed9e78f37fdd1ca8b729ab8484e6c8fe82e15c87e070b861951183657"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.1"
+  stream_channel:
+    dependency: transitive
+    description:
+      name: stream_channel
+      sha256: ba2aa5d8cc609d96bbb2899c28934f9e1af5cddbd60a827822ea467161eb54e7
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.2"
+  string_scanner:
+    dependency: transitive
+    description:
+      name: string_scanner
+      sha256: "688af5ed3402a4bde5b3a6c15fd768dbf2621a614950b17f04626c431ab3c4c3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.3.0"
+  supabase:
+    dependency: transitive
+    description:
+      name: supabase
+      sha256: cc039f63a3168386b3a4f338f3bff342c860d415a3578f3fbe854024aee6f911
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.10.2"
+  supabase_flutter:
+    dependency: "direct main"
+    description:
+      name: supabase_flutter
+      sha256: "92b2416ecb6a5c3ed34cf6e382b35ce6cc8921b64f2a9299d5d28968d42b09bb"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.12.0"
+  term_glyph:
+    dependency: transitive
+    description:
+      name: term_glyph
+      sha256: a29248a84fbb7c79282b40b8c72a1209db169a2e0542bce341da992fe1bc7e84
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.1"
+  test_api:
+    dependency: transitive
+    description:
+      name: test_api
+      sha256: "664d3a9a64782fcdeb83ce9c6b39e78fd2971d4e37827b9b06c3aa1edc5e760c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.7.3"
+  typed_data:
+    dependency: transitive
+    description:
+      name: typed_data
+      sha256: f9049c039ebfeb4cf7a7104a675823cd72dba8297f264b6637062516699fa006
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.4.0"
+  url_launcher:
+    dependency: transitive
+    description:
+      name: url_launcher
+      sha256: f6a7e5c4835bb4e3026a04793a4199ca2d14c739ec378fdfe23fc8075d0439f8
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.3.2"
+  url_launcher_android:
+    dependency: transitive
+    description:
+      name: url_launcher_android
+      sha256: "0aedad096a85b49df2e4725fa32118f9fa580f3b14af7a2d2221896a02cd5656"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.3.17"
+  url_launcher_ios:
+    dependency: transitive
+    description:
+      name: url_launcher_ios
+      sha256: "7f2022359d4c099eea7df3fdf739f7d3d3b9faf3166fb1dd390775176e0b76cb"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.3.3"
+  url_launcher_linux:
+    dependency: transitive
+    description:
+      name: url_launcher_linux
+      sha256: "4e9ba368772369e3e08f231d2301b4ef72b9ff87c31192ef471b380ef29a4935"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.2.1"
+  url_launcher_macos:
+    dependency: transitive
+    description:
+      name: url_launcher_macos
+      sha256: "17ba2000b847f334f16626a574c702b196723af2a289e7a93ffcb79acff855c2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.2.2"
+  url_launcher_platform_interface:
+    dependency: transitive
+    description:
+      name: url_launcher_platform_interface
+      sha256: "552f8a1e663569be95a8190206a38187b531910283c3e982193e4f2733f01029"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.2"
+  url_launcher_web:
+    dependency: transitive
+    description:
+      name: url_launcher_web
+      sha256: "4bd2b7b4dc4d4d0b94e5babfffbca8eac1a126c7f3d6ecbc1a11013faa3abba2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.1"
+  url_launcher_windows:
+    dependency: transitive
+    description:
+      name: url_launcher_windows
+      sha256: "3284b6d2ac454cf34f114e1d3319866fdd1e19cdc329999057e44ffe936cfa77"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.4"
+  vector_math:
+    dependency: transitive
+    description:
+      name: vector_math
+      sha256: "80b3257d1492ce4d091729e3a67a60407d227c27241d6927be0130c98e741803"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.4"
+  vm_service:
+    dependency: transitive
+    description:
+      name: vm_service
+      sha256: f6be3ed8bd01289b34d679c2b62226f63c0e69f9fd2e50a6b3c1c729a961041b
+      url: "https://pub.dev"
+    source: hosted
+    version: "14.3.0"
+  web:
+    dependency: transitive
+    description:
+      name: web
+      sha256: "868d88a33d8a87b18ffc05f9f030ba328ffefba92d6c127917a2ba740f9cfe4a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
+  web_socket:
+    dependency: transitive
+    description:
+      name: web_socket
+      sha256: "34d64019aa8e36bf9842ac014bb5d2f5586ca73df5e4d9bf5c936975cae6982c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
+  web_socket_channel:
+    dependency: transitive
+    description:
+      name: web_socket_channel
+      sha256: d645757fb0f4773d602444000a8131ff5d48c9e47adfe9772652dd1a4f2d45c8
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.3"
+  xdg_directories:
+    dependency: transitive
+    description:
+      name: xdg_directories
+      sha256: "7a3f37b05d989967cdddcbb571f1ea834867ae2faa29725fd085180e0883aa15"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
+  yet_another_json_isolate:
+    dependency: transitive
+    description:
+      name: yet_another_json_isolate
+      sha256: fe45897501fa156ccefbfb9359c9462ce5dec092f05e8a56109db30be864f01e
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.0"
+sdks:
+  dart: ">=3.6.0 <4.0.0"
+  flutter: ">=3.27.0"
+</file>
+
+<file path="pubspec.yaml">
+name: fast_food_app
+description: "App de comida rápida"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  flutter_localizations:
+    sdk: flutter
+
+  provider: ^6.1.2
+  supabase_flutter: ^2.5.6
+  flutter_dotenv: ^5.1.0
+  http: ^1.2.2
+
+  # Para subir imágenes desde galería (empleado)
+  image_picker: ^1.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - .env
+    - assets/images/
+</file>
+
+<file path="README.md">
+
+</file>
+
+</files>
